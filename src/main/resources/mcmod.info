@@ -1,0 +1,16 @@
+[
+{
+  "modid": "luminousflux",
+  "name": "Luminous Flux",
+  "description": "A mod based around lighting",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Cobbleopolis"],
+  "credits": "The Forge and FML guys",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
