@@ -1,8 +1,8 @@
-[21:15:40] [main/INFO]: Setting user: Cobbleopolis
-[21:15:44] [Client thread/INFO]: LWJGL Version: 2.9.1
-[21:15:53] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Not Enough Items, FMLFileResourcePack:Luminous Flux, FMLFileResourcePack:examplemod, FMLFileResourcePack:iChunUtil, FMLFileResourcePack:Tabula
-[21:15:55] [Sound Library Loader/INFO]: Sound engine started
-[21:15:58] [Client thread/ERROR]: Using missing texture, unable to load minecraft:textures/blocks/MISSING_ICON_BLOCK_165_luminousLamp.png
+[21:39:39] [main/INFO]: Setting user: Cobbleopolis
+[21:39:43] [Client thread/INFO]: LWJGL Version: 2.9.1
+[21:39:52] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Not Enough Items, FMLFileResourcePack:Luminous Flux, FMLFileResourcePack:examplemod, FMLFileResourcePack:iChunUtil, FMLFileResourcePack:Tabula
+[21:39:54] [Sound Library Loader/INFO]: Sound engine started
+[21:39:57] [Client thread/ERROR]: Using missing texture, unable to load minecraft:textures/blocks/MISSING_ICON_BLOCK_165_luminousLamp.png
 java.io.FileNotFoundException: minecraft:textures/blocks/MISSING_ICON_BLOCK_165_luminousLamp.png
 	at net.minecraft.client.resources.FallbackResourceManager.getResource(FallbackResourceManager.java:65) ~[FallbackResourceManager.class:?]
 	at net.minecraft.client.resources.SimpleReloadableResourceManager.getResource(SimpleReloadableResourceManager.java:67) ~[SimpleReloadableResourceManager.class:?]
@@ -27,11 +27,11 @@ java.io.FileNotFoundException: minecraft:textures/blocks/MISSING_ICON_BLOCK_165_
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.7.0_10]
 	at java.lang.reflect.Method.invoke(Method.java:601) ~[?:1.7.0_10]
 	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:134) [idea_rt.jar:?]
-[21:15:58] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
-[21:15:58] [Client thread/INFO]: Created: 256x256 textures/items-atlas
-[21:15:59] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Not Enough Items, FMLFileResourcePack:Luminous Flux, FMLFileResourcePack:examplemod, FMLFileResourcePack:iChunUtil, FMLFileResourcePack:Tabula
-[21:16:00] [Client thread/INFO]: Created: 256x256 textures/items-atlas
-[21:16:00] [Client thread/ERROR]: Using missing texture, unable to load minecraft:textures/blocks/MISSING_ICON_BLOCK_165_luminousLamp.png
+[21:39:58] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
+[21:39:58] [Client thread/INFO]: Created: 256x256 textures/items-atlas
+[21:39:59] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Not Enough Items, FMLFileResourcePack:Luminous Flux, FMLFileResourcePack:examplemod, FMLFileResourcePack:iChunUtil, FMLFileResourcePack:Tabula
+[21:39:59] [Client thread/INFO]: Created: 256x256 textures/items-atlas
+[21:39:59] [Client thread/ERROR]: Using missing texture, unable to load minecraft:textures/blocks/MISSING_ICON_BLOCK_165_luminousLamp.png
 java.io.FileNotFoundException: minecraft:textures/blocks/MISSING_ICON_BLOCK_165_luminousLamp.png
 	at net.minecraft.client.resources.FallbackResourceManager.getResource(FallbackResourceManager.java:65) ~[FallbackResourceManager.class:?]
 	at net.minecraft.client.resources.SimpleReloadableResourceManager.getResource(SimpleReloadableResourceManager.java:67) ~[SimpleReloadableResourceManager.class:?]
@@ -59,42 +59,28 @@ java.io.FileNotFoundException: minecraft:textures/blocks/MISSING_ICON_BLOCK_165_
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.7.0_10]
 	at java.lang.reflect.Method.invoke(Method.java:601) ~[?:1.7.0_10]
 	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:134) [idea_rt.jar:?]
-[21:16:00] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
-[21:16:01] [Sound Library Loader/INFO]: Sound engine started
-[21:16:11] [Server thread/INFO]: Starting integrated minecraft server version 1.7.10
-[21:16:11] [Server thread/INFO]: Generating keypair
-[21:16:11] [Server thread/INFO]: Preparing start region for level 0
-[21:16:12] [Server thread/INFO]: Preparing spawn area: 47%
-[21:16:14] [Server thread/INFO]: Changing view distance to 12, from 10
-[21:16:14] [Server thread/INFO]: Cobbleopolis[local:E:19ec05c9] logged in with entity id 357 at (-142.15230781308819, 64.62636195225357, 265.54229030682654)
-[21:16:14] [Server thread/INFO]: Cobbleopolis joined the game
-[21:17:04] [Server thread/INFO]: Saving and pausing game...
-[21:17:04] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
-[21:17:04] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
-[21:17:04] [Server thread/INFO]: Saving chunks for level 'New World'/The End
-[21:17:15] [Server thread/INFO]: Saving and pausing game...
-[21:17:15] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
-[21:17:15] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
-[21:17:15] [Server thread/INFO]: Saving chunks for level 'New World'/The End
-[21:17:40] [Server thread/INFO]: Saving and pausing game...
-[21:17:40] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
-[21:17:40] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
-[21:17:40] [Server thread/INFO]: Saving chunks for level 'New World'/The End
-[21:18:02] [Server thread/INFO]: Cobbleopolis has just earned the achievement [Taking Inventory]
-[21:18:02] [Client thread/INFO]: [CHAT] Cobbleopolis has just earned the achievement [Taking Inventory]
-[21:18:43] [Server thread/INFO]: Saving and pausing game...
-[21:18:43] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
-[21:18:43] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
-[21:18:43] [Server thread/INFO]: Saving chunks for level 'New World'/The End
-[21:19:56] [Client thread/INFO]: Warning: Clientside chunk ticking took 128 ms
-[21:19:59] [Server thread/INFO]: Saving and pausing game...
-[21:19:59] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
-[21:19:59] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
-[21:19:59] [Server thread/INFO]: Saving chunks for level 'New World'/The End
-[21:20:00] [Server thread/INFO]: Stopping server
-[21:20:00] [Server thread/INFO]: Saving players
-[21:20:00] [Server thread/INFO]: Saving worlds
-[21:20:00] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
-[21:20:00] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
-[21:20:00] [Server thread/INFO]: Saving chunks for level 'New World'/The End
-[21:20:01] [Client thread/INFO]: Stopping!
+[21:40:00] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
+[21:40:01] [Sound Library Loader/INFO]: Sound engine started
+[21:40:14] [Server thread/INFO]: Starting integrated minecraft server version 1.7.10
+[21:40:14] [Server thread/INFO]: Generating keypair
+[21:40:15] [Server thread/INFO]: Preparing start region for level 0
+[21:40:16] [Server thread/INFO]: Preparing spawn area: 74%
+[21:40:16] [Server thread/INFO]: Changing view distance to 12, from 10
+[21:40:17] [Server thread/INFO]: Cobbleopolis[local:E:6ec1177d] logged in with entity id 328 at (-137.32789669692056, 67.0, 239.38347413504047)
+[21:40:17] [Server thread/INFO]: Cobbleopolis joined the game
+[21:40:19] [Server thread/INFO]: Saving and pausing game...
+[21:40:19] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[21:40:19] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[21:40:19] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[21:41:53] [Client thread/INFO]: [CHAT] You are now playing creative+
+[21:42:53] [Server thread/INFO]: Saving and pausing game...
+[21:42:53] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[21:42:53] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[21:42:53] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[21:42:54] [Server thread/INFO]: Stopping server
+[21:42:54] [Server thread/INFO]: Saving players
+[21:42:54] [Server thread/INFO]: Saving worlds
+[21:42:54] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[21:42:54] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[21:42:54] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[21:42:56] [Client thread/INFO]: Stopping!
