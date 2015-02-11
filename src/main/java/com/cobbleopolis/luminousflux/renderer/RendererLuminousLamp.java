@@ -72,6 +72,7 @@ public class RendererLuminousLamp extends TileEntitySpecialRenderer implements
 	public void renderTileEntityAt(TileEntity te, double x, double y,
 								   double z, float paramFloat) {
 		GL11.glPushMatrix();
+//        GL11.glRotatef(180F, 1f, 0f, 0f);
 		GL11.glTranslatef((float) x + 0.5F, (float) y - 0.5F, (float) z + 0.5F);
 		ResourceLocation textures = (new ResourceLocation(
 				 LuminousFlux.MODID + ":textures/blocks/lamp.png"));
