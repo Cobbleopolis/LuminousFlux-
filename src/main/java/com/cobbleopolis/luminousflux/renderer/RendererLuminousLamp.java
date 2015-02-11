@@ -81,6 +81,5 @@ public class RendererLuminousLamp extends TileEntitySpecialRenderer implements
 		this.model.render(null, 0.0F, 0.0F, -0.1F, 0.0F, 0.0F, 0.0625F);
 		GL11.glPopMatrix();
 		GL11.glPopMatrix();
-
 	}
 }
