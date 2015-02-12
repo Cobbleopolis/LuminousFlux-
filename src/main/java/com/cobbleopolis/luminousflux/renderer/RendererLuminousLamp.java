@@ -16,11 +16,7 @@ import org.lwjgl.opengl.GL11;
 public class RendererLuminousLamp extends TileEntitySpecialRenderer implements
 		IItemRenderer {
 
-	//The model of your block
 	private final ModelLuminousLamp model;
-
-
-	TileEntityChestRenderer thing;
 
 	public RendererLuminousLamp() {
 		this.model = new ModelLuminousLamp();
@@ -59,7 +55,7 @@ public class RendererLuminousLamp extends TileEntitySpecialRenderer implements
 			default:
 		}
 		ResourceLocation textures = (new ResourceLocation(
-				LuminousFlux.MODID + ":textures/blocks/lamp.png"));
+				LuminousFlux.MODID + ":textures/blocks/luminousLamp.png"));
 		Minecraft.getMinecraft().renderEngine.bindTexture(textures);
 		this.model.render(null, 0.0F, 0.0F, -0.1F, 0.0F, 0.0F, 0.0625F);
 		GL11.glCullFace(GL11.GL_BACK);
@@ -69,13 +65,12 @@ public class RendererLuminousLamp extends TileEntitySpecialRenderer implements
 	@Override
 	public void renderTileEntityAt(TileEntity te, double x, double y,
 								   double z, float paramFloat) {
-		float f5 = 0.0625F;
 		GL11.glPushMatrix();
 		GL11.glCullFace(GL11.GL_FRONT);
 		GL11.glTranslatef((float) x + 0.5F, (float) y + 1.5F, (float) z + 0.5F);
 		GL11.glScalef(1F, -1F, 1F);
 		ResourceLocation textures = (new ResourceLocation(
-				LuminousFlux.MODID + ":textures/blocks/lamp.png"));
+				LuminousFlux.MODID + ":textures/blocks/luminousLamp.png"));
 		Minecraft.getMinecraft().renderEngine.bindTexture(textures);
 		GL11.glPushMatrix();
 		this.model.render(null, 0.0F, 0.0F, -0.1F, 0.0F, 0.0F, 0.0625F);

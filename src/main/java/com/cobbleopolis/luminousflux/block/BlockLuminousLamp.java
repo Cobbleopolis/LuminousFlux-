@@ -19,10 +19,11 @@ public class BlockLuminousLamp extends BlockContainer {
 	public BlockLuminousLamp() {
 		super(Material.glass);
 		setCreativeTab(LuminousFlux.tabLF);
-		setStepSound(this.soundTypeGlass);
+		setStepSound(this.soundTypeStone);
 		setBlockName(Names.Blocks.LUMINOUS_LAMP);
 		setLightLevel(1F);
 		setLightOpacity(0);
+		setBlockBounds(.25F, .0F, .25F, .75F, .875F, .75F);
 
 	}
 

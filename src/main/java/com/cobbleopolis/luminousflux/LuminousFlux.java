@@ -1,6 +1,7 @@
 package com.cobbleopolis.luminousflux;
 
 import com.cobbleopolis.luminousflux.init.LFBlocks;
+import com.cobbleopolis.luminousflux.init.LFCrafting;
 import com.cobbleopolis.luminousflux.proxy.CommonProxy;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
@@ -33,10 +34,15 @@ public class LuminousFlux
 	public void preInit(FMLPreInitializationEvent event) {
 		configPath = event.getModConfigurationDirectory() + "luminousflux.cfg";
 //		CofigurationBPP.init(new File(configPath));
-		System.out.println("Blocks");
+		System.out.println("Registering Luminous Flux Blocks...");
 		LFBlocks.registerBlocks();
-		System.out.println("Tile");
+		System.out.println("Finished Registering Luminous Flux Blocks");
+		System.out.println("Registering Luminous Flux Tile Entities...");
 		LFBlocks.registerTileEntity();
+		System.out.println("Finished Registering Luminous Flux Tile Entities");
+		System.out.println("Registering Luminous Flux Crafting Recipes...");
+		LFCrafting.loadRecipes();
+		System.out.println("Finished Registering Luminous Flux Crafting Recipes...");
 	}
 
     @EventHandler
