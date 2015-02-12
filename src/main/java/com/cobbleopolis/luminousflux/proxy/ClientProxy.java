@@ -1,7 +1,9 @@
 package com.cobbleopolis.luminousflux.proxy;
 
 import com.cobbleopolis.luminousflux.init.LFBlocks;
+import com.cobbleopolis.luminousflux.renderer.RendererLight;
 import com.cobbleopolis.luminousflux.renderer.RendererLuminousLamp;
+import com.cobbleopolis.luminousflux.tileentity.TileEntityLight;
 import com.cobbleopolis.luminousflux.tileentity.TileEntityLuminousLamp;
 import cpw.mods.fml.client.registry.ClientRegistry;
 import ibxm.Player;
@@ -20,21 +22,18 @@ public class ClientProxy extends CommonProxy implements ILFProxy{
 
 	@Override
 	public void registerRenderers() {
-		//Steam Pipe
+		//Luminous Lamp
 		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityLuminousLamp.class,
 				new RendererLuminousLamp());
 		MinecraftForgeClient.registerItemRenderer(
 				Item.getItemFromBlock(LFBlocks.luminousLamp),
 				new RendererLuminousLamp());
-//		//Boiler Hood
-//		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityBoilerHood.class,
-//				new RendererBoilerHood());
-//		MinecraftForgeClient.registerItemRenderer(
-//				Item.getItemFromBlock(SteamCraftBlock.boilerHood),
-//				new RendererBoilerHood());
-//		//Blunderbuss Shot
-//		RenderingRegistry.registerEntityRenderingHandler(
-//				EntityBlunderbussShot.class, new RenderSnowball(SteamCraftItem.brassBallBearing));
+		//Light
+		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityLight.class,
+				new RendererLight());
+		MinecraftForgeClient.registerItemRenderer(
+				Item.getItemFromBlock(LFBlocks.light),
+				new RendererLight());
 	}
 
 	@Override

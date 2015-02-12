@@ -6,10 +6,13 @@ import com.cobbleopolis.luminousflux.reference.Textures;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
+import net.minecraft.tileentity.TileEntity;
+import net.minecraft.world.World;
 
-public class LFBlock extends Block {
+public class LFBlock extends BlockContainer {
 
 	protected LFBlock(Material material) {
 		super(material);
@@ -32,4 +35,8 @@ public class LFBlock extends Block {
 		return unlocalizedName.substring(unlocalizedName.indexOf(".") + 1);
 	}
 
+	@Override
+	public TileEntity createNewTileEntity(World p_149915_1_, int p_149915_2_) {
+		return null;
+	}
 }

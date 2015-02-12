@@ -15,7 +15,7 @@ import net.minecraft.util.Facing;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
-public class BlockLuminousLamp extends BlockContainer {
+public class BlockLuminousLamp extends LFBlock {
 	public BlockLuminousLamp() {
 		super(Material.glass);
 		setCreativeTab(LuminousFlux.tabLF);
