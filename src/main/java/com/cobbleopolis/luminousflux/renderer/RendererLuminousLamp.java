@@ -49,11 +49,9 @@ public class RendererLuminousLamp extends TileEntitySpecialRenderer implements
 		GL11.glCullFace(GL11.GL_FRONT);
 		GL11.glScalef(1F, -1F, 1F);
 		GL11.glTranslatef(0F, -0.5F, 0F);
-		switch (type) {
-			case INVENTORY:
-				GL11.glTranslatef(0F, -0.5F, 0F);
-			default:
-		}
+        if(type == ItemRenderType.INVENTORY || type == ItemRenderType.EQUIPPED_FIRST_PERSON)
+            GL11.glTranslatef(0F, -0.5F, 0F);
+
 		ResourceLocation textures = (new ResourceLocation(
 				LuminousFlux.MODID + ":textures/blocks/luminousLamp.png"));
 		Minecraft.getMinecraft().renderEngine.bindTexture(textures);

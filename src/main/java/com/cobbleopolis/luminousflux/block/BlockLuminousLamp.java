@@ -30,7 +30,7 @@ public class BlockLuminousLamp extends BlockContainer {
 	//You don't want the normal render type, or it wont render properly.
 	@Override
 	public int getRenderType() {
-		return -1;
+        return -1;
 	}
 
 	//It's not an opaque cube, so you need this.
@@ -41,42 +41,11 @@ public class BlockLuminousLamp extends BlockContainer {
 
 	//It's not a normal block, so you need this too.
 	public boolean renderAsNormalBlock() {
-		return false;
+        return false;
 	}
 
 	@Override
 	public TileEntity createNewTileEntity(World world, int metadata) {
 		return new TileEntityLuminousLamp();
 	}
-
-//	@Override
-//	public TileEntity createNewTileEntity(World p_149915_1_, int p_149915_2_) {
-//		return null;
-//	}
-
-
-//	/**
-//	 * Returns true if the given side of this block type should be rendered, if the adjacent block is at the given
-//	 * coordinates.  Args: blockAccess, x, y, z, side
-//	 */
-//	@SideOnly(Side.CLIENT)
-//	public boolean shouldSideBeRendered(IBlockAccess blockAccess, int x, int y, int z, int side)
-//	{
-//		Block block = blockAccess.getBlock(x, y, z);
-//
-//		if (this == LFBlocks.luminousLamp)
-//		{
-//			if (blockAccess.getBlockMetadata(x, y, z) != blockAccess.getBlockMetadata(x - Facing.offsetsXForSide[side], y - Facing.offsetsYForSide[side], z - Facing.offsetsZForSide[side]))
-//			{
-//				return true;
-//			}
-//
-//			if (block == this)
-//			{
-//				return false;
-//			}
-//		}
-//
-//		return block != this && super.shouldSideBeRendered(blockAccess, x, y, z, side);
-//	}
 }
