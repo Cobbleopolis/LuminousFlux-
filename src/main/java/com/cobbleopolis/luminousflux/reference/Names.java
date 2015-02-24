@@ -7,4 +7,8 @@ public class Names {
 		public static final String GLOWING_GLASS = "glowingGlass";
 		public static final String LIGHT = "light";
 	}
+
+	public static class Items {
+		public static final String BULB = "bulb";
+	}
 }

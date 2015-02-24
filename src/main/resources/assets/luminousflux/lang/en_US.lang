@@ -1,5 +1,7 @@
 glowingGlass.name=GlowingGlass
+luminousLamp.name=Luminous Lamp
+light.name=Light Fixture
 
-tile.luminousLamp.name=Luminous Lamp
+item.bulb.name=Light Bulb
 
 itemGroup.lf=Luminous Flux

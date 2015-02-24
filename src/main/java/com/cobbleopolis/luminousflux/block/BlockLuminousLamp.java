@@ -1,18 +1,10 @@
 package com.cobbleopolis.luminousflux.block;
 
 import com.cobbleopolis.luminousflux.LuminousFlux;
-import com.cobbleopolis.luminousflux.init.LFBlocks;
 import com.cobbleopolis.luminousflux.reference.Names;
 import com.cobbleopolis.luminousflux.tileentity.TileEntityLuminousLamp;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
-import net.minecraft.init.Blocks;
 import net.minecraft.tileentity.TileEntity;
-import net.minecraft.util.Facing;
-import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
 public class BlockLuminousLamp extends LFBlock {

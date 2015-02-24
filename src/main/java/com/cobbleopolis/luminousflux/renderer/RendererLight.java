@@ -2,7 +2,7 @@ package com.cobbleopolis.luminousflux.renderer;
 
 import com.cobbleopolis.luminousflux.LuminousFlux;
 import com.cobbleopolis.luminousflux.model.ModelLight;
-import com.cobbleopolis.luminousflux.model.ModelLuminousLamp;
+import com.cobbleopolis.luminousflux.tileentity.TileEntityLight;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
 import net.minecraft.item.ItemStack;
@@ -47,10 +47,7 @@ public class RendererLight extends TileEntitySpecialRenderer implements
 		GL11.glPushMatrix();
 		GL11.glCullFace(GL11.GL_FRONT);
 		GL11.glScalef(1F, -1F, 1F);
-		GL11.glTranslatef(0F, -0.5F, 0F);
-//        if(type == ItemRenderType.INVENTORY || type == ItemRenderType.EQUIPPED_FIRST_PERSON)
-//            GL11.glTranslatef(0F, -0.5F, 0F);
-
+		GL11.glTranslatef(0F, -1F, 0F);
 		ResourceLocation textures = (new ResourceLocation(
 				LuminousFlux.MODID + ":textures/blocks/light.png"));
 		Minecraft.getMinecraft().renderEngine.bindTexture(textures);
@@ -60,8 +57,9 @@ public class RendererLight extends TileEntitySpecialRenderer implements
 	}
 
 	@Override
-	public void renderTileEntityAt(TileEntity te, double x, double y,
+	public void renderTileEntityAt(TileEntity tileEntity, double x, double y,
 								   double z, float paramFloat) {
+		TileEntityLight te = (TileEntityLight) tileEntity;
 		GL11.glPushMatrix();
 		GL11.glCullFace(GL11.GL_FRONT);
 		GL11.glTranslatef((float) x + 0.5F, (float) y + 1.5F, (float) z + 0.5F);
@@ -70,7 +68,11 @@ public class RendererLight extends TileEntitySpecialRenderer implements
 				LuminousFlux.MODID + ":textures/blocks/light.png"));
 		Minecraft.getMinecraft().renderEngine.bindTexture(textures);
 		GL11.glPushMatrix();
-		this.model.render(null, 0.0F, 0.0F, -0.1F, 0.0F, 0.0F, 0.0625F);
+		this.model.render(null , 0.0F, 0.0F, -0.1F, 0.0F, 0.0F, 0.0625F);
+		if(!te.bulbItem.equalsIgnoreCase("none")){
+			this.model.light_bottom.render(0.0625F);
+			this.model.light_top.render(0.0625F);
+		}
 		GL11.glCullFace(GL11.GL_BACK);
 		GL11.glPopMatrix();
 		GL11.glPopMatrix();

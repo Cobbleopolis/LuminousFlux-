@@ -2,6 +2,7 @@ package com.cobbleopolis.luminousflux;
 
 import com.cobbleopolis.luminousflux.init.LFBlocks;
 import com.cobbleopolis.luminousflux.init.LFCrafting;
+import com.cobbleopolis.luminousflux.init.LFItems;
 import com.cobbleopolis.luminousflux.proxy.CommonProxy;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
@@ -34,6 +35,9 @@ public class LuminousFlux
 	public void preInit(FMLPreInitializationEvent event) {
 		configPath = event.getModConfigurationDirectory() + "luminousflux.cfg";
 //		CofigurationBPP.init(new File(configPath));
+		System.out.println("Registering Luminous Flux Items...");
+		LFItems.registerItems();
+		System.out.println("Finished Registering Luminous Flux Items");
 		System.out.println("Registering Luminous Flux Blocks...");
 		LFBlocks.registerBlocks();
 		System.out.println("Finished Registering Luminous Flux Blocks");
@@ -46,8 +50,7 @@ public class LuminousFlux
 	}
 
     @EventHandler
-    public void init(FMLInitializationEvent event)
-    {
+    public void init(FMLInitializationEvent event) {
 		proxy.registerRenderers();
 		System.out.println("DIRT BLOCK >> "+Blocks.dirt.getUnlocalizedName());
     }

@@ -28,10 +28,8 @@ public class ModelLight extends ModelBase {
     }
 
     @Override
-    public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) { 
-        this.light_bottom.render(f5);
+    public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) {
         this.fixture.render(f5);
-        this.light_top.render(f5);
     }
 
     /**
