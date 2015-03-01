@@ -1,8 +1,8 @@
-[01:47:17] [main/INFO]: Setting user: Cobbleopolis
-[01:47:20] [Client thread/INFO]: LWJGL Version: 2.9.1
-[01:47:29] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Not Enough Items, FMLFileResourcePack:Luminous Flux, FMLFileResourcePack:examplemod, FMLFileResourcePack:iChunUtil, FMLFileResourcePack:Tabula
-[01:47:31] [Sound Library Loader/INFO]: Sound engine started
-[01:47:34] [Client thread/ERROR]: Unable to parse metadata from luminousflux:textures/blocks/light.png
+[16:13:58] [main/INFO]: Setting user: Cobbleopolis
+[16:14:01] [Client thread/INFO]: LWJGL Version: 2.9.1
+[16:14:08] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Not Enough Items, FMLFileResourcePack:Luminous Flux, FMLFileResourcePack:examplemod, FMLFileResourcePack:iChunUtil, FMLFileResourcePack:Tabula
+[16:14:11] [Sound Library Loader/INFO]: Sound engine started
+[16:14:15] [Client thread/ERROR]: Unable to parse metadata from luminousflux:textures/blocks/light.png
 java.lang.RuntimeException: broken aspect ratio and not an animation
 	at net.minecraft.client.renderer.texture.TextureAtlasSprite.loadSprite(TextureAtlasSprite.java:245) ~[TextureAtlasSprite.class:?]
 	at net.minecraft.client.renderer.texture.TextureMap.loadTextureAtlas(TextureMap.java:170) [TextureMap.class:?]
@@ -26,7 +26,7 @@ java.lang.RuntimeException: broken aspect ratio and not an animation
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.7.0_10]
 	at java.lang.reflect.Method.invoke(Method.java:601) ~[?:1.7.0_10]
 	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:134) [idea_rt.jar:?]
-[01:47:34] [Client thread/ERROR]: Unable to parse metadata from luminousflux:textures/blocks/luminousLamp.png
+[16:14:15] [Client thread/ERROR]: Unable to parse metadata from luminousflux:textures/blocks/luminousLamp.png
 java.lang.RuntimeException: broken aspect ratio and not an animation
 	at net.minecraft.client.renderer.texture.TextureAtlasSprite.loadSprite(TextureAtlasSprite.java:245) ~[TextureAtlasSprite.class:?]
 	at net.minecraft.client.renderer.texture.TextureMap.loadTextureAtlas(TextureMap.java:170) [TextureMap.class:?]
@@ -50,8 +50,8 @@ java.lang.RuntimeException: broken aspect ratio and not an animation
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.7.0_10]
 	at java.lang.reflect.Method.invoke(Method.java:601) ~[?:1.7.0_10]
 	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:134) [idea_rt.jar:?]
-[01:47:34] [Client thread/INFO]: Created: 1024x512 textures/blocks-atlas
-[01:47:34] [Client thread/ERROR]: Using missing texture, unable to load luminousflux:textures/items/null.png
+[16:14:15] [Client thread/INFO]: Created: 1024x512 textures/blocks-atlas
+[16:14:15] [Client thread/ERROR]: Using missing texture, unable to load luminousflux:textures/items/null.png
 java.io.FileNotFoundException: luminousflux:textures/items/null.png
 	at net.minecraft.client.resources.FallbackResourceManager.getResource(FallbackResourceManager.java:65) ~[FallbackResourceManager.class:?]
 	at net.minecraft.client.resources.SimpleReloadableResourceManager.getResource(SimpleReloadableResourceManager.java:67) ~[SimpleReloadableResourceManager.class:?]
@@ -76,9 +76,9 @@ java.io.FileNotFoundException: luminousflux:textures/items/null.png
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.7.0_10]
 	at java.lang.reflect.Method.invoke(Method.java:601) ~[?:1.7.0_10]
 	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:134) [idea_rt.jar:?]
-[01:47:34] [Client thread/INFO]: Created: 256x256 textures/items-atlas
-[01:47:35] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Not Enough Items, FMLFileResourcePack:Luminous Flux, FMLFileResourcePack:examplemod, FMLFileResourcePack:iChunUtil, FMLFileResourcePack:Tabula
-[01:47:35] [Client thread/ERROR]: Using missing texture, unable to load luminousflux:textures/items/null.png
+[16:14:15] [Client thread/INFO]: Created: 256x256 textures/items-atlas
+[16:14:17] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Not Enough Items, FMLFileResourcePack:Luminous Flux, FMLFileResourcePack:examplemod, FMLFileResourcePack:iChunUtil, FMLFileResourcePack:Tabula
+[16:14:17] [Client thread/ERROR]: Using missing texture, unable to load luminousflux:textures/items/null.png
 java.io.FileNotFoundException: luminousflux:textures/items/null.png
 	at net.minecraft.client.resources.FallbackResourceManager.getResource(FallbackResourceManager.java:65) ~[FallbackResourceManager.class:?]
 	at net.minecraft.client.resources.SimpleReloadableResourceManager.getResource(SimpleReloadableResourceManager.java:67) ~[SimpleReloadableResourceManager.class:?]
@@ -106,8 +106,8 @@ java.io.FileNotFoundException: luminousflux:textures/items/null.png
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.7.0_10]
 	at java.lang.reflect.Method.invoke(Method.java:601) ~[?:1.7.0_10]
 	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:134) [idea_rt.jar:?]
-[01:47:35] [Client thread/INFO]: Created: 256x256 textures/items-atlas
-[01:47:35] [Client thread/ERROR]: Unable to parse metadata from luminousflux:textures/blocks/light.png
+[16:14:17] [Client thread/INFO]: Created: 256x256 textures/items-atlas
+[16:14:17] [Client thread/ERROR]: Unable to parse metadata from luminousflux:textures/blocks/light.png
 java.lang.RuntimeException: broken aspect ratio and not an animation
 	at net.minecraft.client.renderer.texture.TextureAtlasSprite.loadSprite(TextureAtlasSprite.java:245) ~[TextureAtlasSprite.class:?]
 	at net.minecraft.client.renderer.texture.TextureMap.loadTextureAtlas(TextureMap.java:170) [TextureMap.class:?]
@@ -134,7 +134,7 @@ java.lang.RuntimeException: broken aspect ratio and not an animation
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.7.0_10]
 	at java.lang.reflect.Method.invoke(Method.java:601) ~[?:1.7.0_10]
 	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:134) [idea_rt.jar:?]
-[01:47:35] [Client thread/ERROR]: Unable to parse metadata from luminousflux:textures/blocks/luminousLamp.png
+[16:14:17] [Client thread/ERROR]: Unable to parse metadata from luminousflux:textures/blocks/luminousLamp.png
 java.lang.RuntimeException: broken aspect ratio and not an animation
 	at net.minecraft.client.renderer.texture.TextureAtlasSprite.loadSprite(TextureAtlasSprite.java:245) ~[TextureAtlasSprite.class:?]
 	at net.minecraft.client.renderer.texture.TextureMap.loadTextureAtlas(TextureMap.java:170) [TextureMap.class:?]
@@ -161,50 +161,43 @@ java.lang.RuntimeException: broken aspect ratio and not an animation
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.7.0_10]
 	at java.lang.reflect.Method.invoke(Method.java:601) ~[?:1.7.0_10]
 	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:134) [idea_rt.jar:?]
-[01:47:35] [Client thread/INFO]: Created: 1024x512 textures/blocks-atlas
-[01:47:36] [Sound Library Loader/INFO]: Sound engine started
-[01:47:45] [Server thread/INFO]: Starting integrated minecraft server version 1.7.10
-[01:47:45] [Server thread/INFO]: Generating keypair
-[01:47:45] [Server thread/INFO]: Preparing start region for level 0
-[01:47:46] [Server thread/INFO]: Preparing spawn area: 69%
-[01:47:47] [Server thread/INFO]: Changing view distance to 12, from 10
-[01:47:48] [Server thread/INFO]: Cobbleopolis[local:E:3d01f65b] logged in with entity id 217 at (176.44120153813745, 115.0, 392.8836375344034)
-[01:47:48] [Server thread/INFO]: Cobbleopolis joined the game
-[01:47:50] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 2300ms behind, skipping 46 tick(s)
-[01:49:35] [Server thread/INFO]: [Cobbleopolis: Given [Sign] * 1 to Cobbleopolis]
-[01:49:35] [Client thread/INFO]: [CHAT] Given [Sign] * 1 to Cobbleopolis
-[01:49:38] [Client thread/INFO]: [CHAT] Saved screenshot as 2015-03-01_01.49.37.png
-[01:49:54] [Server thread/INFO]: Saving and pausing game...
-[01:49:54] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
-[01:49:54] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
-[01:49:54] [Server thread/INFO]: Saving chunks for level 'New World'/The End
-[01:50:03] [Server thread/INFO]: Saving and pausing game...
-[01:50:03] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
-[01:50:03] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
-[01:50:03] [Server thread/INFO]: Saving chunks for level 'New World'/The End
-[01:50:11] [Server thread/INFO]: Saving and pausing game...
-[01:50:11] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
-[01:50:11] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
-[01:50:11] [Server thread/INFO]: Saving chunks for level 'New World'/The End
-[01:50:19] [Server thread/INFO]: Saving and pausing game...
-[01:50:19] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
-[01:50:19] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
-[01:50:19] [Server thread/INFO]: Saving chunks for level 'New World'/The End
-[01:50:24] [Server thread/INFO]: Saving and pausing game...
-[01:50:24] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
-[01:50:24] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
-[01:50:24] [Server thread/INFO]: Saving chunks for level 'New World'/The End
-[01:55:26] [Client thread/INFO]: [CHAT] You are now playing adventure
-[01:55:26] [Client thread/INFO]: [CHAT] You are now playing survival
-[01:55:28] [Client thread/INFO]: [CHAT] You are now playing creative
-[01:55:51] [Server thread/INFO]: Saving and pausing game...
-[01:55:51] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
-[01:55:51] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
-[01:55:51] [Server thread/INFO]: Saving chunks for level 'New World'/The End
-[01:55:52] [Server thread/INFO]: Stopping server
-[01:55:52] [Server thread/INFO]: Saving players
-[01:55:52] [Server thread/INFO]: Saving worlds
-[01:55:52] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
-[01:55:52] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
-[01:55:52] [Server thread/INFO]: Saving chunks for level 'New World'/The End
-[01:55:53] [Client thread/INFO]: Stopping!
+[16:14:17] [Client thread/INFO]: Created: 1024x512 textures/blocks-atlas
+[16:14:18] [Sound Library Loader/INFO]: Sound engine started
+[16:14:44] [Server thread/INFO]: Starting integrated minecraft server version 1.7.10
+[16:14:44] [Server thread/INFO]: Generating keypair
+[16:14:45] [Server thread/INFO]: Preparing start region for level 0
+[16:14:46] [Server thread/INFO]: Preparing spawn area: 24%
+[16:14:47] [Server thread/INFO]: Changing view distance to 12, from 10
+[16:14:47] [Server thread/INFO]: Cobbleopolis[local:E:fa6822a0] logged in with entity id 219 at (177.9833364695903, 115.0, 393.3174686463069)
+[16:14:47] [Server thread/INFO]: Cobbleopolis joined the game
+[16:14:49] [Server thread/INFO]: Saving and pausing game...
+[16:14:49] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[16:14:49] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[16:14:49] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[16:16:23] [Server thread/INFO]: Saving and pausing game...
+[16:16:23] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[16:16:23] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[16:16:23] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[16:16:32] [Server thread/INFO]: Saving and pausing game...
+[16:16:32] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[16:16:32] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[16:16:32] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[16:16:39] [Server thread/INFO]: Saving and pausing game...
+[16:16:39] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[16:16:40] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[16:16:40] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[16:16:46] [Server thread/INFO]: Saving and pausing game...
+[16:16:46] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[16:16:46] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[16:16:46] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[16:18:45] [Server thread/INFO]: Saving and pausing game...
+[16:18:45] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[16:18:45] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[16:18:45] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[16:18:46] [Server thread/INFO]: Stopping server
+[16:18:46] [Server thread/INFO]: Saving players
+[16:18:46] [Server thread/INFO]: Saving worlds
+[16:18:46] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[16:18:46] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[16:18:46] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[16:18:47] [Client thread/INFO]: Stopping!

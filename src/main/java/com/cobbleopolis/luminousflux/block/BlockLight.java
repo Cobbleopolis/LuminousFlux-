@@ -122,17 +122,29 @@ public class BlockLight extends LFBlock {
 				else
 					this.setBlockBounds(.9375f, .375f, .375f, 1f, .625f, .625f);
 				break;
-			case 3:
-				this.setBlockBounds(.375f, .0f, .375f, .625f, .3125f, .625f);
+			case 3: //NORTH
+				if (!te.bulbItem.equalsIgnoreCase("none"))
+					this.setBlockBounds(.375f, .375f, 0f, .625f, .625f, .3125f);
+				else
+					this.setBlockBounds(.375f, .375f, 0f, .625f, .625f, .0625f);
 				break;
-			case 4:
-				this.setBlockBounds(.375f, .0f, .375f, .625f, .3125f, .625f);
+			case 4: //SOUTH
+				if (!te.bulbItem.equalsIgnoreCase("none"))
+					this.setBlockBounds(.375f, .375f, .6875f, .625f, .625f, 1f);
+				else
+					this.setBlockBounds(.375f, .375f, .9375f, .625f, .625f, 1f);
 				break;
-			case 5:
-				this.setBlockBounds(.375f, .0f, .375f, .625f, .3125f, .625f);
+			case 5: //DOWN
+				if (!te.bulbItem.equalsIgnoreCase("none"))
+					this.setBlockBounds(.375f, 0f, .375f, .625f, .3125f, .625f);
+				else
+					this.setBlockBounds(.375f, 0f, .375f, .625f, .0625f, .625f);
 				break;
-			case 6:
-				this.setBlockBounds(.375f, .0f, .375f, .625f, .3125f, .625f);
+			case 6: //UP
+				if (!te.bulbItem.equalsIgnoreCase("none"))
+					this.setBlockBounds(.375f, .6875f, .375f, .625f, 1f, .625f);
+				else
+					this.setBlockBounds(.375f, .9375f, .375f, .625f, 1f, .625f);
 				break;
 		}
 	}

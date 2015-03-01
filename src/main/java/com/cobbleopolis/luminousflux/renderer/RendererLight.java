@@ -74,13 +74,20 @@ public class RendererLight extends TileEntitySpecialRenderer implements
 				GL11.glRotatef(90F, 0F, 0F, 1F);
 				GL11.glTranslatef(-1F, 1F, 0F);
 				break;
-			case 3:
+			case 3: //NORTH
+				GL11.glRotatef(90F, 1F, 0F, 0F);
+				GL11.glTranslatef(0F, 1F, 1F);
 				break;
-			case 4:
+			case 4: //SOUTH
+				GL11.glRotatef(-90F, 1F, 0F, 0F);
+				GL11.glTranslatef(0F, 1F, -1F);
 				break;
-			case 5:
+			case 5: //DOWN
+
 				break;
-			case 6:
+			case 6: //UP
+				GL11.glRotatef(-180F, 1F, 0F, 0F);
+				GL11.glTranslatef(0F, 2F, 0F);
 				break;
 		}
 		GL11.glScalef(1F, -1F, 1F);
