@@ -9,25 +9,31 @@ import net.minecraft.tileentity.TileEntity;
 public class TileEntityLight extends TileEntity {
 
 	public String bulbItem = "none";
+	public int direction = 0;
+
+	public TileEntityLight(){
+		super();
+	}
 
 	@Override
-	public void updateEntity(){
-		if(!bulbItem.equalsIgnoreCase("none")){
+	public void updateEntity() {
+		if (!bulbItem.equalsIgnoreCase("none")) {
 			worldObj.getBlock(xCoord, xCoord, xCoord).setBlockBounds(.375f, .0F, .375F, .625f, .3125f, .625F);
 		}
 	}
 
 	@Override
-	public void writeToNBT(NBTTagCompound par1)
-	{
+	public void writeToNBT(NBTTagCompound par1) {
 		super.writeToNBT(par1);
 		par1.setString("bulbItem", bulbItem);
+		par1.setInteger("direction", direction);
 	}
 
 	@Override
 	public void readFromNBT(NBTTagCompound par1) {
 		super.readFromNBT(par1);
 		this.bulbItem = par1.getString("bulbItem");
+		this.direction = par1.getInteger("direction");
 	}
 
 	@Override

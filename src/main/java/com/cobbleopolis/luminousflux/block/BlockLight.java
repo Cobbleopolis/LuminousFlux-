@@ -9,15 +9,17 @@ import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
+import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
 public class BlockLight extends LFBlock {
+
+	int d = 0;
 
 	public BlockLight() {
 		super(Material.iron);
 		setStepSound(this.soundTypeStone);
 		setBlockName(Names.Blocks.LIGHT);
-		setBlockBounds(.375f, .0F, .375F, .625f, .3125f, .625F);
 	}
 
 	//You don't want the normal render type, or it wont render properly.
@@ -39,7 +41,9 @@ public class BlockLight extends LFBlock {
 
 	@Override
 	public TileEntity createNewTileEntity(World world, int metadata) {
-		return new TileEntityLight();
+		TileEntityLight te = new TileEntityLight();
+		te.direction = d;
+		return te;
 	}
 
 	@Override
@@ -66,5 +70,70 @@ public class BlockLight extends LFBlock {
 			}
 		}
 		return false;
+	}
+
+	/**
+	 * Called when a block is placed using its ItemBlock. Args: World, X, Y, Z, side, hitX, hitY, hitZ, block metadata
+	 */
+	@Override
+	public int onBlockPlaced(World world, int x, int y, int z, int side, float hitX, float hitY, float hitZ, int metadata) {
+		int j1 = metadata;
+
+		if (side == 0) {
+			j1 = 6;
+		}
+		if (side == 1) {
+			j1 = 5;
+		}
+
+		if (side == 2) {
+			j1 = 4;
+		}
+
+		if (side == 3) {
+			j1 = 3;
+		}
+
+		if (side == 4) {
+			j1 = 2;
+		}
+
+		if (side == 5) {
+			j1 = 1;
+		}
+
+		d = j1;
+		return j1;
+	}
+
+	@Override
+	public void setBlockBoundsBasedOnState(IBlockAccess iba, int x, int y, int z) {
+		TileEntityLight te = (TileEntityLight) iba.getTileEntity(x, y, z);
+		switch (te.direction) {
+			case 1: //WEST
+				if (!te.bulbItem.equalsIgnoreCase("none"))
+					this.setBlockBounds(0f, .375f, .375f, .3125f, .625f, .625f);
+				else
+					this.setBlockBounds(0f, .375f, .375f, .0625f, .625f, .625f);
+				break;
+			case 2: //EAST
+				if (!te.bulbItem.equalsIgnoreCase("none"))
+					this.setBlockBounds(.6875f, .375f, .375f, 1f, .625f, .625f);
+				else
+					this.setBlockBounds(.9375f, .375f, .375f, 1f, .625f, .625f);
+				break;
+			case 3:
+				this.setBlockBounds(.375f, .0f, .375f, .625f, .3125f, .625f);
+				break;
+			case 4:
+				this.setBlockBounds(.375f, .0f, .375f, .625f, .3125f, .625f);
+				break;
+			case 5:
+				this.setBlockBounds(.375f, .0f, .375f, .625f, .3125f, .625f);
+				break;
+			case 6:
+				this.setBlockBounds(.375f, .0f, .375f, .625f, .3125f, .625f);
+				break;
+		}
 	}
 }

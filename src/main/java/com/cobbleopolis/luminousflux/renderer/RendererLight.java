@@ -60,16 +60,37 @@ public class RendererLight extends TileEntitySpecialRenderer implements
 	public void renderTileEntityAt(TileEntity tileEntity, double x, double y,
 								   double z, float paramFloat) {
 		TileEntityLight te = (TileEntityLight) tileEntity;
+		int dir = te.direction;
+//		System.out.println(dir);
 		GL11.glPushMatrix();
 		GL11.glCullFace(GL11.GL_FRONT);
 		GL11.glTranslatef((float) x + 0.5F, (float) y + 1.5F, (float) z + 0.5F);
+		switch (dir) {
+			case 1: //WEST
+				GL11.glRotatef(-90F, 0F, 0F, 1F);
+				GL11.glTranslatef(1F, 1F, 0F);
+				break;
+			case 2: //EAST
+				GL11.glRotatef(90F, 0F, 0F, 1F);
+				GL11.glTranslatef(-1F, 1F, 0F);
+				break;
+			case 3:
+				break;
+			case 4:
+				break;
+			case 5:
+				break;
+			case 6:
+				break;
+		}
 		GL11.glScalef(1F, -1F, 1F);
 		ResourceLocation textures = (new ResourceLocation(
 				LuminousFlux.MODID + ":textures/blocks/light.png"));
 		Minecraft.getMinecraft().renderEngine.bindTexture(textures);
 		GL11.glPushMatrix();
-		this.model.render(null , 0.0F, 0.0F, -0.1F, 0.0F, 0.0F, 0.0625F);
-		if(!te.bulbItem.equalsIgnoreCase("none")){
+		this.model.render(null, 0.0F, 0.0F, -0.1F, 0.0F, 0.0F, 0.0625F);
+		if (!te.bulbItem.equalsIgnoreCase("none")) {
+
 			this.model.light_bottom.render(0.0625F);
 			this.model.light_top.render(0.0625F);
 		}
