@@ -46,12 +46,14 @@ public class RendererLight extends TileEntitySpecialRenderer implements
 	public void renderItem(ItemRenderType type, ItemStack item, Object... data) {
 		GL11.glPushMatrix();
 		GL11.glCullFace(GL11.GL_FRONT);
+		GL11.glEnable(GL11.GL_BLEND);
 		GL11.glScalef(1F, -1F, 1F);
 		GL11.glTranslatef(0F, -1F, 0F);
 		ResourceLocation textures = (new ResourceLocation(
-				LuminousFlux.MODID + ":textures/blocks/light.png"));
+				LuminousFlux.MODID + ":textures/blocks/light2.png"));
 		Minecraft.getMinecraft().renderEngine.bindTexture(textures);
 		this.model.render(null, 0.0F, 0.0F, -0.1F, 0.0F, 0.0F, 0.0625F);
+		GL11.glDisable(GL11.GL_BLEND);
 		GL11.glCullFace(GL11.GL_BACK);
 		GL11.glPopMatrix();
 	}
@@ -92,7 +94,7 @@ public class RendererLight extends TileEntitySpecialRenderer implements
 		}
 		GL11.glScalef(1F, -1F, 1F);
 		ResourceLocation textures = (new ResourceLocation(
-				LuminousFlux.MODID + ":textures/blocks/light.png"));
+				LuminousFlux.MODID + ":textures/blocks/light2.png"));
 		Minecraft.getMinecraft().renderEngine.bindTexture(textures);
 		GL11.glPushMatrix();
 		this.model.render(null, 0.0F, 0.0F, -0.1F, 0.0F, 0.0F, 0.0625F);

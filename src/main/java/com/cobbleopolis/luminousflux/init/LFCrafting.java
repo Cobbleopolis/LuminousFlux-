@@ -4,12 +4,11 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.crafting.FurnaceRecipes;
-import net.minecraftforge.oredict.ShapedOreRecipe;
 
 public class LFCrafting {
 	public static void loadRecipes() {
 		GameRegistry.addRecipe(new ItemStack(LFBlocks.luminousLamp), "S", "G", "C", 'S', Blocks.stone_slab, 'G', Blocks.glowstone, 'C', Blocks.cobblestone);
+		GameRegistry.addRecipe(new ItemStack(LFItems.itemBulb), "GGG", "G-G", "-I-", 'G', Blocks.glass, 'I', Items.iron_ingot);
 	}
 
 	public static void loadOreRecipes() {

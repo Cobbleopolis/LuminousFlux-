@@ -62,7 +62,7 @@ key_key.right:32
 key_key.jump:57
 key_key.sneak:42
 key_key.drop:16
-key_key.inventory:23
+key_key.inventory:18
 key_key.chat:28
 key_key.playerlist:15
 key_key.pickItem:-98
