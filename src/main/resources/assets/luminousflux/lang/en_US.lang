@@ -1,6 +1,6 @@
 glowingGlass.name=GlowingGlass
 luminousLamp.name=Luminous Lamp
-light.name=Light Fixture
+lightFixture.name=Light Fixture
 
 item.bulb.name=Light Bulb
 

@@ -1,7 +1,7 @@
 package com.cobbleopolis.luminousflux.proxy;
 
 import com.cobbleopolis.luminousflux.init.LFBlocks;
-import com.cobbleopolis.luminousflux.renderer.RendererLight;
+import com.cobbleopolis.luminousflux.renderer.RendererLightFixture;
 import com.cobbleopolis.luminousflux.renderer.RendererLuminousLamp;
 import com.cobbleopolis.luminousflux.tileentity.TileEntityLight;
 import com.cobbleopolis.luminousflux.tileentity.TileEntityLuminousLamp;
@@ -30,10 +30,10 @@ public class ClientProxy extends CommonProxy implements ILFProxy{
 				new RendererLuminousLamp());
 		//Light
 		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityLight.class,
-				new RendererLight());
+				new RendererLightFixture());
 		MinecraftForgeClient.registerItemRenderer(
-				Item.getItemFromBlock(LFBlocks.light),
-				new RendererLight());
+				Item.getItemFromBlock(LFBlocks.lightFixture),
+				new RendererLightFixture());
 	}
 
 	@Override

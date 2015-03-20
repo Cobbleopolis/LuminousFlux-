@@ -8,12 +8,12 @@ import net.minecraft.entity.Entity;
  * ModelLight - Cobbleopolis
  * Created using Tabula 4.1.1
  */
-public class ModelLight extends ModelBase {
+public class ModelLightFixture extends ModelBase {
     public ModelRenderer fixture;
     public ModelRenderer light_bottom;
     public ModelRenderer light_top;
 
-    public ModelLight() {
+    public ModelLightFixture() {
         this.textureWidth = 28;
         this.textureHeight = 8;
         this.light_bottom = new ModelRenderer(this, 12, 5);

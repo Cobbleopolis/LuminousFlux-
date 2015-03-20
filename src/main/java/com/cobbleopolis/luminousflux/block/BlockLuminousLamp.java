@@ -16,7 +16,6 @@ public class BlockLuminousLamp extends LFBlock {
 		setLightLevel(1F);
 		setLightOpacity(0);
 		setBlockBounds(.25F, .0F, .25F, .75F, .875F, .75F);
-
 	}
 
 	//You don't want the normal render type, or it wont render properly.

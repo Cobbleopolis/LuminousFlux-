@@ -1,7 +1,7 @@
 package com.cobbleopolis.luminousflux.renderer;
 
 import com.cobbleopolis.luminousflux.LuminousFlux;
-import com.cobbleopolis.luminousflux.model.ModelLight;
+import com.cobbleopolis.luminousflux.model.ModelLightFixture;
 import com.cobbleopolis.luminousflux.tileentity.TileEntityLight;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
@@ -12,13 +12,13 @@ import net.minecraftforge.client.IItemRenderer;
 import org.lwjgl.opengl.GL11;
 
 
-public class RendererLight extends TileEntitySpecialRenderer implements
+public class RendererLightFixture extends TileEntitySpecialRenderer implements
 		IItemRenderer {
 
-	private final ModelLight model;
+	private final ModelLightFixture model;
 
-	public RendererLight() {
-		this.model = new ModelLight();
+	public RendererLightFixture() {
+		this.model = new ModelLightFixture();
 	}
 
 	@Override

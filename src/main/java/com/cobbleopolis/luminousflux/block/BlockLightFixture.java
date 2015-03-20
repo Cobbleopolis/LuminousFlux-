@@ -12,11 +12,11 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
-public class BlockLight extends LFBlock {
+public class BlockLightFixture extends LFBlock {
 
 	int d = 0;
 
-	public BlockLight() {
+	public BlockLightFixture() {
 		super(Material.iron);
 		setStepSound(this.soundTypeStone);
 		setBlockName(Names.Blocks.LIGHT);
