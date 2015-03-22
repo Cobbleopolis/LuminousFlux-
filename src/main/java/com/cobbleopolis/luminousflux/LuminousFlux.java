@@ -1,18 +1,18 @@
 package com.cobbleopolis.luminousflux;
 
+import com.cobbleopolis.luminousflux.handler.LFGuiHandler;
 import com.cobbleopolis.luminousflux.init.LFBlocks;
 import com.cobbleopolis.luminousflux.init.LFCrafting;
 import com.cobbleopolis.luminousflux.init.LFItems;
 import com.cobbleopolis.luminousflux.proxy.CommonProxy;
-import cpw.mods.fml.common.SidedProxy;
-import cpw.mods.fml.common.event.FMLPreInitializationEvent;
-import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.init.Blocks;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
+import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
-
-import java.io.File;
+import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import cpw.mods.fml.common.network.NetworkRegistry;
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.init.Blocks;
 
 @Mod(modid = LuminousFlux.MODID, version = LuminousFlux.VERSION)
 public class LuminousFlux
@@ -52,6 +52,7 @@ public class LuminousFlux
     @EventHandler
     public void init(FMLInitializationEvent event) {
 		proxy.registerRenderers();
+		NetworkRegistry.INSTANCE.registerGuiHandler(LuminousFlux.instance, new LFGuiHandler());
 		System.out.println("DIRT BLOCK >> "+Blocks.dirt.getUnlocalizedName());
     }
 }
