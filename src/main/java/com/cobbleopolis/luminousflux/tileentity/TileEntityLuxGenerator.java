@@ -1,17 +1,11 @@
 package com.cobbleopolis.luminousflux.tileentity;
 
-import com.cobbleopolis.luminousflux.init.LFBlocks;
-import com.cobbleopolis.luminousflux.init.LFItems;
-import cpw.mods.fml.common.registry.GameRegistry;
-import net.minecraft.block.Block;
+import com.cobbleopolis.luminousflux.handler.FuelHandlerLuxGenerator;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.inventory.ISidedInventory;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.ItemTool;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
 import net.minecraft.network.NetworkManager;
@@ -166,6 +160,13 @@ public class TileEntityLuxGenerator extends TileEntity implements ISidedInventor
 		return i * this.burnTime / this.maxBurnTime;
 	}
 
+	public int getScaledEnergy(int i) {
+		if (this.maxLux == 0)
+			return 0;
+
+		return i * this.storedLux / this.maxLux;
+	}
+
 	public boolean isBurning() {
 		return this.burnTime > 0;
 	}
@@ -182,7 +183,7 @@ public class TileEntityLuxGenerator extends TileEntity implements ISidedInventor
 					this.storedLux++;
 			}
 
-			if (this.burnTime == 0 && this.canSmelt()) {
+			if (this.burnTime == 0 && this.canSmelt() && this.storedLux < this.maxLux) {
 				this.burnTime = this.maxBurnTime = getItemBurnTime(this.itemStacks[0]);
 				this.maxBurnTime = getItemBurnTime(this.itemStacks[0]);
 
@@ -244,17 +245,19 @@ public class TileEntityLuxGenerator extends TileEntity implements ISidedInventor
 		} else {
 			Item item = itemstack.getItem();
 
-			if (item instanceof ItemBlock && Block.getBlockFromItem(item) != Blocks.air) {
-				Block block = Block.getBlockFromItem(item);
+			return FuelHandlerLuxGenerator.getItemFuelValue(item);
 
-				if (block == LFBlocks.glowingGlass) {
-					return 200;
-				}
-			}
-
-			if (item == LFItems.itemBulb) return 1600;
-			if (item instanceof ItemTool && ((ItemTool) item).getToolMaterialName().equals("EMERALD")) return 300;
-			return GameRegistry.getFuelValue(itemstack);
+//			if (item instanceof ItemBlock && Block.getBlockFromItem(item) != Blocks.air) {
+//				Block block = Block.getBlockFromItem(item);
+//
+//				if (block == LFBlocks.glowingGlass) {
+//					return 200;
+//				}
+//			}
+//
+//			if (item == LFItems.itemBulb) return 1600;
+//			if (item instanceof ItemTool && ((ItemTool) item).getToolMaterialName().equals("EMERALD")) return 300;
+//			return GameRegistry.getFuelValue(itemstack);
 		}
 	}
 
@@ -296,6 +299,7 @@ public class TileEntityLuxGenerator extends TileEntity implements ISidedInventor
 	public boolean canExtractItem(int par1, ItemStack itemstack, int par3) {
 		return par3 != 0 || par1 != 1 || itemstack.getItem() == Items.bucket;
 	}
+
 
 	@Override
 	public Packet getDescriptionPacket() {

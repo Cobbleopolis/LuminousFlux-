@@ -34,8 +34,7 @@ public class BlockLuxGenerator extends BlockContainer {
 		setCreativeTab(LuminousFlux.tabLF);
 		setBlockName(Names.Blocks.LUX_GENERATOR);
 		setStepSound(this.soundTypeStone);
-		setLightLevel(1F);
-		setLightOpacity(0);
+		setHardness(3.5F);
 	}
 
 	@SideOnly(Side.CLIENT)

@@ -1,8 +1,10 @@
 package com.cobbleopolis.luminousflux.init;
 
+import com.cobbleopolis.luminousflux.handler.FuelHandlerLuxGenerator;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
 public class LFCrafting {
@@ -42,6 +44,13 @@ public class LFCrafting {
 //				new ItemStack(SteamCraftItem.ingotZinc), 0.7F);
 //		FurnaceRecipes.smelting().func_151396_a(Items.water_bucket,
 //				new ItemStack(SteamCraftItem.steamBucket), 0.7F);
+	}
+
+	public static void loadLuxGeneratorFuels() {
+		FuelHandlerLuxGenerator.registerFuel(Item.getItemFromBlock(Blocks.glowstone), 15);
+		FuelHandlerLuxGenerator.registerFuel(Item.getItemFromBlock(Blocks.redstone_lamp), 20);
+		FuelHandlerLuxGenerator.registerFuel(Item.getItemFromBlock(Blocks.torch), 15);
+		FuelHandlerLuxGenerator.registerFuel(Item.getItemFromBlock(LFBlocks.glowingGlass), 25);
 	}
 
 }

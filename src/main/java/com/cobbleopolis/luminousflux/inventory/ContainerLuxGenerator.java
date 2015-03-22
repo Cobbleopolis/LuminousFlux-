@@ -8,6 +8,7 @@ import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.Container;
 import net.minecraft.inventory.ICrafting;
 import net.minecraft.inventory.Slot;
+import net.minecraft.item.ItemStack;
 
 public class ContainerLuxGenerator extends Container {
 
@@ -60,50 +61,33 @@ public class ContainerLuxGenerator extends Container {
 		return this.te.isUseableByPlayer(player);
 	}
 
-//	@Override
-//	public ItemStack transferStackInSlot(EntityPlayer player, int par2){
-//		ItemStack itemstack = null;
-//		Slot slot = (Slot) this.inventorySlots.get(par2);
+	@Override
+	public ItemStack transferStackInSlot(EntityPlayer entityPlayer, int slot) {
 //
-//		if(slot != null && slot.getHasStack()){
-//			ItemStack itemstack1 = slot.getStack();
-//			itemstack = itemstack1.copy();
+//		Slot slotObject = (Slot) inventorySlots.get(slot);
+//		if(slotObject != null && slotObject.getHasStack()) {
+//			ItemStack stackInSlot = slotObject.getStack();
+//			ItemStack stack = stackInSlot.copy();
+//			if(slot <= 1) {
+//				if(!mergeItemStack(stackInSlot, 2, inventorySlots.size(), true))
+//					return null;
+//			} else if(slot != 1 && stack.itemID == ModItems.necronomicon.itemID && !getSlot(0).getHasStack()) {
+//				ItemStack copy = slotObject.decrStackSize(1);
+//				getSlot(0).putStack(copy);
+//				return null;
 //
-//			if(par2 == 2){
-//				if(!this.mergeItemStack(itemstack1, 3, 39, true)){
-//					return null;
-//				}
-//				slot.onSlotChange(itemstack1, itemstack);
-//			}else if(par2 != 1 && par2 != 0){
-//				if(CraftingLuxGenerator.smelting().getSmeltingResult(itemstack1) != null){
-//					if(!this.mergeItemStack(itemstack1, 0, 1, false)){
-//						return null;
-//					}
-//				}else if(TileEntityLuxGenerator.isItemFuel(itemstack1)){
-//					if(!this.mergeItemStack(itemstack1, 1, 2, false)){
-//						return null;
-//					}
-//				}else if(par2 >=3 && par2 < 30){
-//					if(!this.mergeItemStack(itemstack1, 30, 39, false)){
-//						return null;
-//					}
-//				}else if(par2 >= 30 && par2 < 39 && !this.mergeItemStack(itemstack1, 3, 30, false)){
-//					return null;
-//				}
-//			}else if(!this.mergeItemStack(itemstack1, 3, 39, false)){
+//			} else {
 //				return null;
 //			}
-//			if(itemstack1.stackSize == 0){
-//				slot.putStack((ItemStack)null);
-//			}else{
-//				slot.onSlotChanged();
-//			}
-//			if(itemstack1.stackSize == itemstack.stackSize){
-//				return null;
-//			}
-//			slot.onPickupFromSlot(player, itemstack1);
+//
+//			if(stackInSlot.stackSize == 0)
+//				slotObject.putStack(null);
+//			else
+//				slotObject.onSlotChanged();
+//
+//			return stack;
 //		}
-//		return itemstack;
-//	}
+		return null;
+	}
 
 }

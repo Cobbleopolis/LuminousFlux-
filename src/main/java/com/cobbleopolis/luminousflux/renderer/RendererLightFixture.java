@@ -2,6 +2,7 @@ package com.cobbleopolis.luminousflux.renderer;
 
 import com.cobbleopolis.luminousflux.LuminousFlux;
 import com.cobbleopolis.luminousflux.model.ModelLightFixture;
+import com.cobbleopolis.luminousflux.reference.Textures;
 import com.cobbleopolis.luminousflux.tileentity.TileEntityLight;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
@@ -49,7 +50,7 @@ public class RendererLightFixture extends TileEntitySpecialRenderer implements
 		GL11.glScalef(1F, -1F, 1F);
 		GL11.glTranslatef(0F, -1F, 0F);
 		ResourceLocation textures = (new ResourceLocation(
-				LuminousFlux.MODID + ":textures/blocks/light2.png"));
+				LuminousFlux.MODID + ":textures/blocks/lightFixture.png"));
 		Minecraft.getMinecraft().renderEngine.bindTexture(textures);
 		this.model.render(null, 0.0F, 0.0F, -0.1F, 0.0F, 0.0F, 0.0625F);
 		GL11.glCullFace(GL11.GL_BACK);
@@ -93,7 +94,7 @@ public class RendererLightFixture extends TileEntitySpecialRenderer implements
         }
         GL11.glScalef(1F, -1F, 1F);
         ResourceLocation textures = (new ResourceLocation(
-				LuminousFlux.MODID + ":textures/blocks/light2.png"));
+				Textures.RESOURCE_PREFIX + "textures/blocks/lightFixture.png"));
         Minecraft.getMinecraft().renderEngine.bindTexture(textures);
         this.model.render(null, 0.0F, 0.0F, -0.1F, 0.0F, 0.0F, 0.0625F);
         if (!te.bulbItem.equalsIgnoreCase("none")) {

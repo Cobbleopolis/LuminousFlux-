@@ -46,6 +46,7 @@ public class LuminousFlux
 		System.out.println("Finished Registering Luminous Flux Tile Entities");
 		System.out.println("Registering Luminous Flux Crafting Recipes...");
 		LFCrafting.loadRecipes();
+		LFCrafting.loadLuxGeneratorFuels();
 		System.out.println("Finished Registering Luminous Flux Crafting Recipes...");
 	}
 
