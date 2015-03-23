@@ -190,7 +190,6 @@ public class TileEntityLuxGenerator extends TileEntity implements ISidedInventor
 				if (this.burnTime > 0) {
 					if (this.itemStacks[0] != null) {
 						--this.itemStacks[0].stackSize;
-                        this.worldObj.spawnParticle("fireworksSpark", this.xCoord, this.yCoord, this.zCoord, 0, 0, 0);
 						if (this.itemStacks[0].stackSize == 0)
 							this.itemStacks[0] = itemStacks[0].getItem().getContainerItem(this.itemStacks[0]);
 					}
