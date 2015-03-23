@@ -37,8 +37,6 @@ public class BlockGlowingGlass extends LFBlock {
 		return false;
 	}
 
-
-
 	/**
 	 //	 * Returns true if the given side of this block type should be rendered, if the adjacent block is at the given
 	 //	 * coordinates.  Args: blockAccess, x, y, z, side
@@ -58,11 +56,5 @@ public class BlockGlowingGlass extends LFBlock {
 		}
 
 		return block != this && super.shouldSideBeRendered(blockAccess, x, y, z, side);
-	}
-
-	@Override
-	public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int par6, float par7, float par8, float par9) {
-		player.setVelocity(0.0, 10.0, 0.0);
-		return false;
 	}
 }
