@@ -31,7 +31,6 @@ public class BlockLuxGenerator extends BlockContainer {
 
 	public BlockLuxGenerator() {
 		super(Material.rock);
-		setCreativeTab(LuminousFlux.tabLF);
 		setBlockName(Names.Blocks.LUX_GENERATOR);
 		setStepSound(this.soundTypeStone);
 		setHardness(3.5F);
@@ -40,7 +39,6 @@ public class BlockLuxGenerator extends BlockContainer {
 	@SideOnly(Side.CLIENT)
 	public void registerBlockIcons(IIconRegister iconRegister) {
 		this.blockIcon = iconRegister.registerIcon(LuminousFlux.MODID + ":luxGeneratorSide");
-//		this.bottom = iconRegister.registerIcon(LuminousFlux.MODID + ":luxGeneratorBottom");
 		this.top = iconRegister.registerIcon(LuminousFlux.MODID + ":luxGeneratorTop");
 	}
 
@@ -63,15 +61,16 @@ public class BlockLuxGenerator extends BlockContainer {
 	 */
 	@Override
 	public TileEntity createNewTileEntity(World world, int par2) {
+//		return new TileEntityLuxGenerator(0, 512, false, true);
 		return new TileEntityLuxGenerator();
 	}
 
 
-	@Override
-	public void onBlockAdded(World world, int x, int y, int z) {
-		super.onBlockAdded(world, x, y, z);
-//		this.direction(world, x, y, z);
-	}
+//	@Override
+//	public void onBlockAdded(World world, int x, int y, int z) {
+//		super.onBlockAdded(world, x, y, z);
+////		this.direction(world, x, y, z);
+//	}
 
 //	private void direction(World world, int x, int y, int z) {
 //		if (!world.isRemote) {

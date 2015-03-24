@@ -54,6 +54,7 @@ public class LuminousFlux
     public void init(FMLInitializationEvent event) {
 		proxy.registerRenderers();
 		NetworkRegistry.INSTANCE.registerGuiHandler(LuminousFlux.instance, new LFGuiHandler());
+		Blocks.torch.setLightLevel(.75F);
 		System.out.println("DIRT BLOCK >> "+Blocks.dirt.getUnlocalizedName());
     }
 }

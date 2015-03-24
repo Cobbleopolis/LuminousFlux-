@@ -47,9 +47,21 @@ public class LFCrafting {
 	}
 
 	public static void loadLuxGeneratorFuels() {
+		FuelHandlerLuxGenerator.registerFuel(Item.getItemFromBlock(Blocks.beacon), 15);
 		FuelHandlerLuxGenerator.registerFuel(Item.getItemFromBlock(Blocks.glowstone), 15);
-		FuelHandlerLuxGenerator.registerFuel(Item.getItemFromBlock(Blocks.redstone_lamp), 20);
-		FuelHandlerLuxGenerator.registerFuel(Item.getItemFromBlock(Blocks.torch), 15);
+		FuelHandlerLuxGenerator.registerFuel(Item.getItemFromBlock(Blocks.lit_pumpkin), 15);
+		FuelHandlerLuxGenerator.registerFuel(Item.getItemFromBlock(Blocks.redstone_lamp), 15);
+		FuelHandlerLuxGenerator.registerFuel(Item.getItemFromBlock(Blocks.torch), 14);
+		FuelHandlerLuxGenerator.registerFuel(Item.getItemFromBlock(Blocks.furnace), 13);
+		FuelHandlerLuxGenerator.registerFuel(Item.getItemFromBlock(Blocks.redstone_ore), 9);
+		FuelHandlerLuxGenerator.registerFuel(Item.getItemFromBlock(Blocks.ender_chest), 7);
+		FuelHandlerLuxGenerator.registerFuel(Item.getItemFromBlock(Blocks.redstone_torch), 7);
+		FuelHandlerLuxGenerator.registerFuel(Item.getItemFromBlock(Blocks.brewing_stand), 1);
+		FuelHandlerLuxGenerator.registerFuel(Item.getItemFromBlock(Blocks.brown_mushroom), 1);
+		FuelHandlerLuxGenerator.registerFuel(Item.getItemFromBlock(Blocks.dragon_egg), 1);
+		FuelHandlerLuxGenerator.registerFuel(Item.getItemFromBlock(Blocks.end_portal_frame), 1);
+
+
 		FuelHandlerLuxGenerator.registerFuel(Item.getItemFromBlock(LFBlocks.glowingGlass), 25);
 	}
 

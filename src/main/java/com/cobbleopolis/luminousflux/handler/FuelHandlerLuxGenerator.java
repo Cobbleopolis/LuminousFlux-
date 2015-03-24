@@ -12,7 +12,16 @@ public class FuelHandlerLuxGenerator {
 		fuelList.put(item.getUnlocalizedName(), value);
 	}
 
+	public static void removeRegisteredFuel(Item item){
+		fuelList.remove(item.getUnlocalizedName());
+	}
+
 	public static int getItemFuelValue(Item item){
-		return fuelList.get(item.getUnlocalizedName());
+		if(fuelList.containsKey(item.getUnlocalizedName())) {
+//			((Item) Item.itemRegistry.getObject(item.getUnlocalizedName())).in
+			return fuelList.get(item.getUnlocalizedName());
+		} else {
+			return 0;
+		}
 	}
 }

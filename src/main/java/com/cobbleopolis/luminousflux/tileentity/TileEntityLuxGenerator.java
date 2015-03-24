@@ -8,30 +8,25 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
-import net.minecraft.network.NetworkManager;
-import net.minecraft.network.Packet;
-import net.minecraft.network.play.server.S35PacketUpdateTileEntity;
-import net.minecraft.tileentity.TileEntity;
 
-public class TileEntityLuxGenerator extends TileEntity implements ISidedInventory {
+public class TileEntityLuxGenerator extends TileEntityLuxPowered implements ISidedInventory {
 
-	private static final int[] slotsTop = new int[]{0};
-	private static final int[] slotsBottom = new int[]{0};
-	private static final int[] slotsSides = new int[]{0};
+	private static final int[] slotsTop = {0};
+	private static final int[] slotsBottom = {0};
+	private static final int[] slotsSides = {0};
 
 	private ItemStack[] itemStacks = new ItemStack[1];
 
 	public int burnTime;
 	public int maxBurnTime;
-	public int storedLux;
-	public int maxLux;
+
 
 	private String generatorName;
 
 	public TileEntityLuxGenerator() {
 		super();
-		storedLux = 0;
-		maxLux = 512;
+		this.storedLux = 0;
+		this.maxLux = 512;
 	}
 
 	public void furnaceName(String string) {
@@ -105,6 +100,7 @@ public class TileEntityLuxGenerator extends TileEntity implements ISidedInventor
 		return 64;
 	}
 
+	@Override
 	public void readFromNBT(NBTTagCompound tagCompound) {
 		super.readFromNBT(tagCompound);
 		NBTTagList tagList = tagCompound.getTagList("items", 10);
@@ -121,20 +117,19 @@ public class TileEntityLuxGenerator extends TileEntity implements ISidedInventor
 
 		this.burnTime = tagCompound.getInteger("burnTime");
 		this.maxBurnTime = tagCompound.getInteger("maxBurnTime");
-		this.storedLux = tagCompound.getInteger("storedLux");
-		this.maxLux = tagCompound.getInteger("maxLux");
+
 
 		if (tagCompound.hasKey("generatorName", 8)) {
 			this.generatorName = tagCompound.getString("generatorName");
 		}
 	}
 
+	@Override
 	public void writeToNBT(NBTTagCompound tagCompound) {
 		super.writeToNBT(tagCompound);
 		tagCompound.setInteger("burnTime", this.burnTime);
 		tagCompound.setInteger("maxBurnTime", this.maxBurnTime);
-		tagCompound.setInteger("storedLux", this.storedLux);
-		tagCompound.setInteger("maxLux", this.maxLux);
+
 		NBTTagList tagList = new NBTTagList();
 
 		for (int i = 0; i < this.itemStacks.length; ++i) {
@@ -298,19 +293,6 @@ public class TileEntityLuxGenerator extends TileEntity implements ISidedInventor
 	@Override
 	public boolean canExtractItem(int par1, ItemStack itemstack, int par3) {
 		return par3 != 0 || par1 != 1 || itemstack.getItem() == Items.bucket;
-	}
-
-
-	@Override
-	public Packet getDescriptionPacket() {
-		NBTTagCompound tag = new NBTTagCompound();
-		this.writeToNBT(tag);
-		return new S35PacketUpdateTileEntity(xCoord, yCoord, zCoord, 1, tag);
-	}
-
-	@Override
-	public void onDataPacket(NetworkManager net, S35PacketUpdateTileEntity packet) {
-		readFromNBT(packet.func_148857_g());
 	}
 
 }

@@ -1,6 +1,5 @@
 package com.cobbleopolis.luminousflux.block;
 
-import com.cobbleopolis.luminousflux.LuminousFlux;
 import com.cobbleopolis.luminousflux.reference.Names;
 import com.cobbleopolis.luminousflux.tileentity.TileEntityLuminousLamp;
 import net.minecraft.block.material.Material;
@@ -10,7 +9,6 @@ import net.minecraft.world.World;
 public class BlockLuminousLamp extends LFBlock {
 	public BlockLuminousLamp() {
 		super(Material.glass);
-		setCreativeTab(LuminousFlux.tabLF);
 		setStepSound(this.soundTypeStone);
 		setBlockName(Names.Blocks.LUMINOUS_LAMP);
 		setLightLevel(1F);
