@@ -6,7 +6,7 @@ import java.util.HashMap;
 
 public class FuelHandlerLuxGenerator {
 
-	private static HashMap<String, Integer> fuelList = new HashMap<String, Integer>();
+	private static HashMap<String, Integer> fuelList = new HashMap<>();
 
 	public static void registerFuel(Item item, int value){
 		fuelList.put(item.getUnlocalizedName(), value);

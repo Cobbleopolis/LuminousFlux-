@@ -56,7 +56,7 @@ public class LFCrafting {
 		FuelHandlerLuxGenerator.registerFuel(Item.getItemFromBlock(Blocks.redstone_ore), 9);
 		FuelHandlerLuxGenerator.registerFuel(Item.getItemFromBlock(Blocks.ender_chest), 7);
 		FuelHandlerLuxGenerator.registerFuel(Item.getItemFromBlock(Blocks.redstone_torch), 7);
-		FuelHandlerLuxGenerator.registerFuel(Item.getItemFromBlock(Blocks.brewing_stand), 1);
+//		FuelHandlerLuxGenerator.registerFuel(Item.getItemFromBlock(Blocks.brewing_stand), 1);
 		FuelHandlerLuxGenerator.registerFuel(Item.getItemFromBlock(Blocks.brown_mushroom), 1);
 		FuelHandlerLuxGenerator.registerFuel(Item.getItemFromBlock(Blocks.dragon_egg), 1);
 		FuelHandlerLuxGenerator.registerFuel(Item.getItemFromBlock(Blocks.end_portal_frame), 1);

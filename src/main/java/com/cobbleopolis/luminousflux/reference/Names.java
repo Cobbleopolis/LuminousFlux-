@@ -11,5 +11,6 @@ public class Names {
 
 	public static class Items {
 		public static final String BULB = "bulb";
+		public static final String WIRING_TOOL = "wiringTool";
 	}
 }

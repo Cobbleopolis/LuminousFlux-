@@ -5,5 +5,6 @@ tile.luxGenerator.name=Lux Generator
 tile.luxGeneratorActive.name=Lux Generator
 
 item.bulb.name=Light Bulb
+item.wiringTool.name=Wiring Tool
 
 itemGroup.lf=Luminous Flux
