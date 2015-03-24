@@ -1,12 +1,17 @@
 package com.cobbleopolis.luminousflux.block;
 
 import com.cobbleopolis.luminousflux.init.LFBlocks;
+import com.cobbleopolis.luminousflux.init.LFItems;
+import com.cobbleopolis.luminousflux.item.ItemBulb;
 import com.cobbleopolis.luminousflux.reference.Names;
+import com.cobbleopolis.luminousflux.tileentity.TileEntityLight;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
+import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.ItemStack;
 import net.minecraft.util.Facing;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
@@ -57,4 +62,5 @@ public class BlockGlowingGlass extends LFBlock {
 
 		return block != this && super.shouldSideBeRendered(blockAccess, x, y, z, side);
 	}
+
 }

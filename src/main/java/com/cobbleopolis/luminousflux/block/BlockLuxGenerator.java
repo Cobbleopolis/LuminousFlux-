@@ -6,7 +6,6 @@ import com.cobbleopolis.luminousflux.tileentity.TileEntityLuxGenerator;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
-import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.EntityLivingBase;
@@ -20,12 +19,10 @@ import net.minecraft.world.World;
 
 import java.util.Random;
 
-public class BlockLuxGenerator extends BlockContainer {
+public class BlockLuxGenerator extends LFBlock {
 
 	@SideOnly(Side.CLIENT)
 	private IIcon top;
-	@SideOnly(Side.CLIENT)
-	private IIcon bottom;
 
 	private final Random random = new Random();
 
