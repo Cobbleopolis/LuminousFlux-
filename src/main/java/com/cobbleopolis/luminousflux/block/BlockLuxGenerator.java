@@ -1,6 +1,7 @@
 package com.cobbleopolis.luminousflux.block;
 
 import com.cobbleopolis.luminousflux.LuminousFlux;
+import com.cobbleopolis.luminousflux.init.LFItems;
 import com.cobbleopolis.luminousflux.reference.Names;
 import com.cobbleopolis.luminousflux.tileentity.TileEntityLuxGenerator;
 import cpw.mods.fml.relauncher.Side;
@@ -49,8 +50,12 @@ public class BlockLuxGenerator extends LFBlock {
 
 	@Override
 	public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int par6, float par7, float par8, float par9) {
-		player.openGui(LuminousFlux.instance, 0, world, x, y, z);
-		return true;
+		if(!player.getHeldItem().getItem().equals(LFItems.itemWiringTool)) {
+			player.openGui(LuminousFlux.instance, 0, world, x, y, z);
+			return true;
+		} else {
+			return false;
+		}
 	}
 
 	/**

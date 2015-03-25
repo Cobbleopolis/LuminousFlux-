@@ -27,6 +27,7 @@ public class TileEntityLuxGenerator extends TileEntityLuxPowered implements ISid
 		super();
 		this.storedLux = 0;
 		this.maxLux = 512;
+		this.outputRate = 5;
 	}
 
 	public void furnaceName(String string) {
@@ -168,6 +169,7 @@ public class TileEntityLuxGenerator extends TileEntityLuxPowered implements ISid
 
 	@Override
 	public void updateEntity() {
+		super.updateEntity();
 		boolean makeDirty = false;
 
 		if (!this.worldObj.isRemote) {

@@ -14,11 +14,17 @@ public class TileEntityLuxPowered extends TileEntity {
 	public int storedLux;
 	public int maxLux;
 
+	public int outputRate;
+
 	public ArrayList<int[]> blocksToPower = new ArrayList<>();
-	public ArrayList<int[]> blocksToRecivePowerFrom = new ArrayList<>();
 
 	public boolean isEnergyBufferFull(){
 		return storedLux >= maxLux;
+	}
+
+	public void sendLuxPacket(TileEntityLuxPowered te, int packetSize){
+		this.storedLux -= packetSize;
+		te.storedLux += packetSize;
 	}
 
 	public boolean canReceiveEnergyPacket(World world, int x, int y, int z, int packetSize) {
@@ -27,6 +33,25 @@ public class TileEntityLuxPowered extends TileEntity {
 			return te.storedLux + packetSize <= maxLux;
 		} else {
 			return false;
+		}
+	}
+
+	public boolean canReceiveEnergyPacket(TileEntityLuxPowered te, int packetSize) {
+		if(te instanceof TileEntityLuxPowered) {
+			return te.storedLux + packetSize <= maxLux;
+		} else {
+			return false;
+		}
+	}
+
+	@Override
+	public void updateEntity(){
+		for(int[] i : blocksToPower){
+			TileEntityLuxPowered te = (TileEntityLuxPowered) worldObj.getTileEntity(i[0], i[1], i[2]);
+			if(this.canReceiveEnergyPacket(te, outputRate) && this.storedLux >= outputRate) {
+				int send = Math.min(this.storedLux, outputRate);
+				this.sendLuxPacket(te, send);
+			}
 		}
 	}
 

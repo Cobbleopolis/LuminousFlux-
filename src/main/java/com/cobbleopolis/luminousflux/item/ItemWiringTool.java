@@ -2,6 +2,7 @@ package com.cobbleopolis.luminousflux.item;
 
 import com.cobbleopolis.luminousflux.reference.Names;
 import com.cobbleopolis.luminousflux.tileentity.TileEntityLuxPowered;
+import net.minecraft.block.Block;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
@@ -28,9 +29,13 @@ public class ItemWiringTool extends LFItem {
                 nbt.setInteger("xFrom", x);
                 nbt.setInteger("yFrom", y);
                 nbt.setInteger("zFrom", z);
-                itemStack.writeToNBT(nbt);
+                itemStack.setTagCompound(nbt);
             } else {
-
+                NBTTagCompound nbt = itemStack.getTagCompound();
+                TileEntityLuxPowered teSender = (TileEntityLuxPowered) world.getTileEntity(nbt.getInteger("xFrom"), nbt.getInteger("xFrom"), nbt.getInteger("xFrom"));
+                int[] block = {x, y, z};
+                teSender.blocksToPower.add(block);
+                itemStack.setTagCompound(null);
             }
         }
         return true;

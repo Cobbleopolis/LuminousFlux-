@@ -1,8 +1,8 @@
-[16:01:31] [main/INFO]: Setting user: Cobbleopolis
-[16:01:34] [Client thread/INFO]: LWJGL Version: 2.9.1
-[16:01:42] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Not Enough Items, FMLFileResourcePack:Luminous Flux, FMLFileResourcePack:examplemod, FMLFileResourcePack:iChunUtil, FMLFileResourcePack:Tabula, FMLFileResourcePack:Waila
-[16:01:44] [Sound Library Loader/INFO]: Sound engine started
-[16:01:47] [Client thread/ERROR]: Unable to parse metadata from luminousflux:textures/blocks/luminousLamp.png
+[15:27:32] [main/INFO]: Setting user: Cobbleopolis
+[15:27:36] [Client thread/INFO]: LWJGL Version: 2.9.1
+[15:27:43] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Not Enough Items, FMLFileResourcePack:Luminous Flux, FMLFileResourcePack:examplemod, FMLFileResourcePack:iChunUtil, FMLFileResourcePack:Tabula, FMLFileResourcePack:Waila
+[15:27:45] [Sound Library Loader/INFO]: Sound engine started
+[15:27:48] [Client thread/ERROR]: Unable to parse metadata from luminousflux:textures/blocks/luminousLamp.png
 java.lang.RuntimeException: broken aspect ratio and not an animation
 	at net.minecraft.client.renderer.texture.TextureAtlasSprite.loadSprite(TextureAtlasSprite.java:245) ~[TextureAtlasSprite.class:?]
 	at net.minecraft.client.renderer.texture.TextureMap.loadTextureAtlas(TextureMap.java:170) [TextureMap.class:?]
@@ -26,7 +26,7 @@ java.lang.RuntimeException: broken aspect ratio and not an animation
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.7.0_76]
 	at java.lang.reflect.Method.invoke(Method.java:606) ~[?:1.7.0_76]
 	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:140) [idea_rt.jar:?]
-[16:01:47] [Client thread/ERROR]: Unable to parse metadata from luminousflux:textures/blocks/lightFixture.png
+[15:27:48] [Client thread/ERROR]: Unable to parse metadata from luminousflux:textures/blocks/lightFixture.png
 java.lang.RuntimeException: broken aspect ratio and not an animation
 	at net.minecraft.client.renderer.texture.TextureAtlasSprite.loadSprite(TextureAtlasSprite.java:245) ~[TextureAtlasSprite.class:?]
 	at net.minecraft.client.renderer.texture.TextureMap.loadTextureAtlas(TextureMap.java:170) [TextureMap.class:?]
@@ -50,8 +50,8 @@ java.lang.RuntimeException: broken aspect ratio and not an animation
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.7.0_76]
 	at java.lang.reflect.Method.invoke(Method.java:606) ~[?:1.7.0_76]
 	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:140) [idea_rt.jar:?]
-[16:01:47] [Client thread/INFO]: Created: 1024x512 textures/blocks-atlas
-[16:01:47] [Client thread/ERROR]: Using missing texture, unable to load luminousflux:textures/items/null.png
+[15:27:48] [Client thread/INFO]: Created: 1024x512 textures/blocks-atlas
+[15:27:48] [Client thread/ERROR]: Using missing texture, unable to load luminousflux:textures/items/null.png
 java.io.FileNotFoundException: luminousflux:textures/items/null.png
 	at net.minecraft.client.resources.FallbackResourceManager.getResource(FallbackResourceManager.java:65) ~[FallbackResourceManager.class:?]
 	at net.minecraft.client.resources.SimpleReloadableResourceManager.getResource(SimpleReloadableResourceManager.java:67) ~[SimpleReloadableResourceManager.class:?]
@@ -76,9 +76,9 @@ java.io.FileNotFoundException: luminousflux:textures/items/null.png
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.7.0_76]
 	at java.lang.reflect.Method.invoke(Method.java:606) ~[?:1.7.0_76]
 	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:140) [idea_rt.jar:?]
-[16:01:47] [Client thread/INFO]: Created: 256x256 textures/items-atlas
-[16:01:49] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Not Enough Items, FMLFileResourcePack:Luminous Flux, FMLFileResourcePack:examplemod, FMLFileResourcePack:iChunUtil, FMLFileResourcePack:Tabula, FMLFileResourcePack:Waila
-[16:01:49] [Client thread/ERROR]: Using missing texture, unable to load luminousflux:textures/items/null.png
+[15:27:48] [Client thread/INFO]: Created: 256x256 textures/items-atlas
+[15:27:50] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Not Enough Items, FMLFileResourcePack:Luminous Flux, FMLFileResourcePack:examplemod, FMLFileResourcePack:iChunUtil, FMLFileResourcePack:Tabula, FMLFileResourcePack:Waila
+[15:27:50] [Client thread/ERROR]: Using missing texture, unable to load luminousflux:textures/items/null.png
 java.io.FileNotFoundException: luminousflux:textures/items/null.png
 	at net.minecraft.client.resources.FallbackResourceManager.getResource(FallbackResourceManager.java:65) ~[FallbackResourceManager.class:?]
 	at net.minecraft.client.resources.SimpleReloadableResourceManager.getResource(SimpleReloadableResourceManager.java:67) ~[SimpleReloadableResourceManager.class:?]
@@ -106,8 +106,8 @@ java.io.FileNotFoundException: luminousflux:textures/items/null.png
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.7.0_76]
 	at java.lang.reflect.Method.invoke(Method.java:606) ~[?:1.7.0_76]
 	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:140) [idea_rt.jar:?]
-[16:01:49] [Client thread/INFO]: Created: 256x256 textures/items-atlas
-[16:01:49] [Client thread/ERROR]: Unable to parse metadata from luminousflux:textures/blocks/luminousLamp.png
+[15:27:50] [Client thread/INFO]: Created: 256x256 textures/items-atlas
+[15:27:50] [Client thread/ERROR]: Unable to parse metadata from luminousflux:textures/blocks/luminousLamp.png
 java.lang.RuntimeException: broken aspect ratio and not an animation
 	at net.minecraft.client.renderer.texture.TextureAtlasSprite.loadSprite(TextureAtlasSprite.java:245) ~[TextureAtlasSprite.class:?]
 	at net.minecraft.client.renderer.texture.TextureMap.loadTextureAtlas(TextureMap.java:170) [TextureMap.class:?]
@@ -134,7 +134,7 @@ java.lang.RuntimeException: broken aspect ratio and not an animation
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.7.0_76]
 	at java.lang.reflect.Method.invoke(Method.java:606) ~[?:1.7.0_76]
 	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:140) [idea_rt.jar:?]
-[16:01:49] [Client thread/ERROR]: Unable to parse metadata from luminousflux:textures/blocks/lightFixture.png
+[15:27:51] [Client thread/ERROR]: Unable to parse metadata from luminousflux:textures/blocks/lightFixture.png
 java.lang.RuntimeException: broken aspect ratio and not an animation
 	at net.minecraft.client.renderer.texture.TextureAtlasSprite.loadSprite(TextureAtlasSprite.java:245) ~[TextureAtlasSprite.class:?]
 	at net.minecraft.client.renderer.texture.TextureMap.loadTextureAtlas(TextureMap.java:170) [TextureMap.class:?]
@@ -161,15 +161,15 @@ java.lang.RuntimeException: broken aspect ratio and not an animation
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.7.0_76]
 	at java.lang.reflect.Method.invoke(Method.java:606) ~[?:1.7.0_76]
 	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:140) [idea_rt.jar:?]
-[16:01:49] [Client thread/INFO]: Created: 1024x512 textures/blocks-atlas
-[16:01:50] [Sound Library Loader/INFO]: Sound engine started
-[16:02:01] [Server thread/INFO]: Starting integrated minecraft server version 1.7.10
-[16:02:01] [Server thread/INFO]: Generating keypair
-[16:02:02] [Server thread/INFO]: Preparing start region for level 0
-[16:02:03] [Server thread/INFO]: Changing view distance to 12, from 10
-[16:02:04] [Server thread/INFO]: Cobbleopolis[local:E:72e52ec7] logged in with entity id 214 at (187.53594486634867, 115.0, 386.9710346532164)
-[16:02:04] [Server thread/INFO]: Cobbleopolis joined the game
-[16:02:04] [pool-2-thread-1/WARN]: Couldn't look up profile properties for com.mojang.authlib.GameProfile@54d3ef6[id=212aa0e0-bfe9-367b-823a-62020b918732,name=Cobbleopolis,properties={},legacy=false]
+[15:27:51] [Client thread/INFO]: Created: 1024x512 textures/blocks-atlas
+[15:27:51] [Sound Library Loader/INFO]: Sound engine started
+[15:28:07] [Server thread/INFO]: Starting integrated minecraft server version 1.7.10
+[15:28:07] [Server thread/INFO]: Generating keypair
+[15:28:08] [Server thread/INFO]: Preparing start region for level 0
+[15:28:09] [Server thread/INFO]: Changing view distance to 12, from 10
+[15:28:10] [Server thread/INFO]: Cobbleopolis[local:E:7914edc6] logged in with entity id 214 at (177.39310648479824, 115.0, 393.7673735348761)
+[15:28:10] [Server thread/INFO]: Cobbleopolis joined the game
+[15:28:11] [pool-2-thread-1/WARN]: Couldn't look up profile properties for com.mojang.authlib.GameProfile@91d80bb[id=212aa0e0-bfe9-367b-823a-62020b918732,name=Cobbleopolis,properties={},legacy=false]
 com.mojang.authlib.exceptions.AuthenticationUnavailableException: Cannot contact authentication server
 	at com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService.makeRequest(YggdrasilAuthenticationService.java:71) ~[YggdrasilAuthenticationService.class:?]
 	at com.mojang.authlib.yggdrasil.YggdrasilMinecraftSessionService.fillGameProfile(YggdrasilMinecraftSessionService.java:158) [YggdrasilMinecraftSessionService.class:?]
@@ -206,24 +206,31 @@ Caused by: java.net.SocketException: Connection reset
 	at com.mojang.authlib.HttpAuthenticationService.performGetRequest(HttpAuthenticationService.java:126) ~[HttpAuthenticationService.class:?]
 	at com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService.makeRequest(YggdrasilAuthenticationService.java:54) ~[YggdrasilAuthenticationService.class:?]
 	... 18 more
-[16:02:04] [Server thread/INFO]: Saving and pausing game...
-[16:02:05] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
-[16:02:05] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
-[16:02:05] [Server thread/INFO]: Saving chunks for level 'New World'/The End
-[16:02:07] [Client thread/INFO]: [CHAT] Version 1.0.4.29 of CodeChickenCore is available
-[16:02:07] [Client thread/INFO]: [CHAT] Version 1.0.3.74 of NotEnoughItems is available
-[16:02:17] [Server thread/INFO]: Saving and pausing game...
-[16:02:17] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
-[16:02:17] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
-[16:02:17] [Server thread/INFO]: Saving chunks for level 'New World'/The End
-[16:02:40] [Server thread/INFO]: Saving and pausing game...
-[16:02:40] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
-[16:02:40] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
-[16:02:40] [Server thread/INFO]: Saving chunks for level 'New World'/The End
-[16:02:41] [Server thread/INFO]: Stopping server
-[16:02:41] [Server thread/INFO]: Saving players
-[16:02:41] [Server thread/INFO]: Saving worlds
-[16:02:41] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
-[16:02:41] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
-[16:02:41] [Server thread/INFO]: Saving chunks for level 'New World'/The End
-[16:02:43] [Client thread/INFO]: Stopping!
+[15:28:14] [Client thread/INFO]: [CHAT] Version 1.0.4.29 of CodeChickenCore is available
+[15:28:14] [Client thread/INFO]: [CHAT] Version 1.0.3.74 of NotEnoughItems is available
+[15:28:17] [Server thread/ERROR]: Encountered an unexpected exception
+net.minecraft.util.ReportedException: Ticking memory connection
+	at net.minecraft.network.NetworkSystem.networkTick(NetworkSystem.java:198) ~[NetworkSystem.class:?]
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:726) ~[MinecraftServer.class:?]
+	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:614) ~[MinecraftServer.class:?]
+	at net.minecraft.server.integrated.IntegratedServer.tick(IntegratedServer.java:118) ~[IntegratedServer.class:?]
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:485) [MinecraftServer.class:?]
+	at net.minecraft.server.MinecraftServer$2.run(MinecraftServer.java:752) [MinecraftServer$2.class:?]
+Caused by: java.lang.NullPointerException
+	at com.cobbleopolis.luminousflux.item.ItemWiringTool.onItemUse(ItemWiringTool.java:37) ~[ItemWiringTool.class:?]
+	at net.minecraftforge.common.ForgeHooks.onPlaceItemIntoWorld(ForgeHooks.java:507) ~[ForgeHooks.class:?]
+	at net.minecraft.item.ItemStack.tryPlaceItemIntoWorld(ItemStack.java:142) ~[ItemStack.class:?]
+	at net.minecraft.server.management.ItemInWorldManager.activateBlockOrUseItem(ItemInWorldManager.java:422) ~[ItemInWorldManager.class:?]
+	at net.minecraft.network.NetHandlerPlayServer.processPlayerBlockPlacement(NetHandlerPlayServer.java:593) ~[NetHandlerPlayServer.class:?]
+	at net.minecraft.network.play.client.C08PacketPlayerBlockPlacement.processPacket(C08PacketPlayerBlockPlacement.java:74) ~[C08PacketPlayerBlockPlacement.class:?]
+	at net.minecraft.network.play.client.C08PacketPlayerBlockPlacement.processPacket(C08PacketPlayerBlockPlacement.java:122) ~[C08PacketPlayerBlockPlacement.class:?]
+	at net.minecraft.network.NetworkManager.processReceivedPackets(NetworkManager.java:241) ~[NetworkManager.class:?]
+	at net.minecraft.network.NetworkSystem.networkTick(NetworkSystem.java:182) ~[NetworkSystem.class:?]
+	... 5 more
+[15:28:17] [Server thread/ERROR]: This crash report has been saved to: C:\Users\Logan\IdeaProjects\LuminousFlux\eclipse\.\crash-reports\crash-2015-03-25_15.28.17-server.txt
+[15:28:17] [Server thread/INFO]: Stopping server
+[15:28:17] [Server thread/INFO]: Saving players
+[15:28:17] [Server thread/INFO]: Saving worlds
+[15:28:17] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[15:28:18] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[15:28:18] [Server thread/INFO]: Saving chunks for level 'New World'/The End
