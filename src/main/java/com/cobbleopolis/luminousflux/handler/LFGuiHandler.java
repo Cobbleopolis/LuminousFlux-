@@ -23,8 +23,8 @@ public class LFGuiHandler implements IGuiHandler {
 			TileEntityLuxGenerator tileEntity = (TileEntityLuxGenerator) world.getTileEntity(x, y, z);
 			return new ContainerLuxGenerator(player.inventory, tileEntity);
 		} else if(ID == Gui.LUX_BATTERY){
-			TileEntityLuxBattery tileEntityTestContainer = (TileEntityLuxBattery) world.getTileEntity(x, y, z);
-			return new ContainerLuxBattery(player.inventory, tileEntityTestContainer);
+			TileEntityLuxBattery tileEntity = (TileEntityLuxBattery) world.getTileEntity(x, y, z);
+			return new ContainerLuxBattery(player.inventory, tileEntity);
 		}
 		return null;
 	}
@@ -32,11 +32,11 @@ public class LFGuiHandler implements IGuiHandler {
 	@Override
 	public Object getClientGuiElement(int ID, EntityPlayer player, World world, int x, int y, int z) {
 		if(ID == Gui.LUX_GENERATOR){
-			TileEntityLuxGenerator tileEntityTestContainer = (TileEntityLuxGenerator) world.getTileEntity(x, y, z);
-			return new GuiLuxGenerator(player.inventory, tileEntityTestContainer);
+			TileEntityLuxGenerator tileEntity = (TileEntityLuxGenerator) world.getTileEntity(x, y, z);
+			return new GuiLuxGenerator(player.inventory, tileEntity);
 		} else if(ID == Gui.LUX_BATTERY) {
-			TileEntityLuxBattery tileEntityTestContainer = (TileEntityLuxBattery) world.getTileEntity(x, y, z);
-			return new GuiLuxBattery(player.inventory, tileEntityTestContainer);
+			TileEntityLuxBattery tileEntity = (TileEntityLuxBattery) world.getTileEntity(x, y, z);
+			return new GuiLuxBattery(player.inventory, tileEntity);
 		}
 
 		return null;
