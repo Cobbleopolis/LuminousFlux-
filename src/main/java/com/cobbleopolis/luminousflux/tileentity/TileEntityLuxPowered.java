@@ -44,7 +44,7 @@ public class TileEntityLuxPowered extends TileEntity {
 	@Override
 	public void updateEntity() {
 		ArrayList<int[]> remove = new ArrayList<>();
-		if (blocksToPower.size() > 0)
+		if (blocksToPower.size() > 0 && this.storedLux >= this.outputRate * this.blocksToPower.size())
 			for (int[] i : blocksToPower) {
 				if (worldObj.getTileEntity(i[0], i[1], i[2]) instanceof TileEntityLuxPowered) {
 					TileEntityLuxPowered te = (TileEntityLuxPowered) worldObj.getTileEntity(i[0], i[1], i[2]);

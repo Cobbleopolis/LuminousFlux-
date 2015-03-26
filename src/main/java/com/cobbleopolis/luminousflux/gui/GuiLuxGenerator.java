@@ -58,7 +58,7 @@ public class GuiLuxGenerator extends GuiContainer {
 		this.mouseX = par1 - guiLeft;
 		this.mouseY = par2 - guiTop;
 //		System.out.println("(" + par1 + " , " + par2 + ") | (" + guiLeft + " , " + guiTop + ")");
-		if(mouseX > 134 && mouseX < 150 && mouseY > 11 && mouseY < 73) {
+		if(mouseX >= 134 && mouseX <= 151 && mouseY >= 12 && mouseY <= 70) {
 			tooltip.add("Lux");
 			tooltip.add(te.storedLux + " lx/" + te.maxLux + " lx");
 			this.func_146283_a(tooltip, mouseX + guiLeft, mouseY + guiTop);
