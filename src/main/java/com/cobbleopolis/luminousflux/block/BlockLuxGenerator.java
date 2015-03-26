@@ -2,6 +2,7 @@ package com.cobbleopolis.luminousflux.block;
 
 import com.cobbleopolis.luminousflux.LuminousFlux;
 import com.cobbleopolis.luminousflux.init.LFItems;
+import com.cobbleopolis.luminousflux.reference.Gui;
 import com.cobbleopolis.luminousflux.reference.Names;
 import com.cobbleopolis.luminousflux.tileentity.TileEntityLuxGenerator;
 import com.cobbleopolis.luminousflux.tileentity.TileEntityLuxPowered;
@@ -55,11 +56,9 @@ public class BlockLuxGenerator extends LFBlock {
 			if (player.getHeldItem().getItem().equals(LFItems.itemWiringTool)) {
 				return false;
 			}
-		} else if (player.isSneaking())
-			for(int[] i : ((TileEntityLuxPowered) world.getTileEntity(x, y, z)).blocksToPower)
-				System.out.println(i[0] + " " + i[1] + " " + i[2]);
+		}
 
-		player.openGui(LuminousFlux.instance, 0, world, x, y, z);
+		player.openGui(LuminousFlux.instance, Gui.LUX_GENERATOR, world, x, y, z);
 		return true;
 	}
 

@@ -17,6 +17,8 @@ public class TileEntityLuxPowered extends TileEntity {
 
 	public int outputRate;
 
+	public String tileName;
+
 	public ArrayList<int[]> blocksToPower = new ArrayList<>();
 
 	public boolean isEnergyBufferFull() {
@@ -40,6 +42,15 @@ public class TileEntityLuxPowered extends TileEntity {
 	public boolean canReceiveEnergyPacket(int packetSize) {
 		return this.storedLux + packetSize <= this.maxLux;
 	}
+
+	public int getScaledEnergy(int i) {
+		if (this.maxLux == 0)
+			return 0;
+
+		return i * this.storedLux / this.maxLux;
+	}
+
+	//Tile Entity
 
 	@Override
 	public void updateEntity() {

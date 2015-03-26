@@ -21,9 +21,6 @@ public class TileEntityLuxGenerator extends TileEntityLuxPowered implements ISid
 	public int maxBurnTime;
 	public int burnRate;
 
-
-	private String generatorName;
-
 	public TileEntityLuxGenerator() {
 		super();
 		this.storedLux = 0;
@@ -32,7 +29,7 @@ public class TileEntityLuxGenerator extends TileEntityLuxPowered implements ISid
 	}
 
 	public void furnaceName(String string) {
-		this.generatorName = string;
+		this.tileName = string;
 	}
 
 	@Override
@@ -88,12 +85,12 @@ public class TileEntityLuxGenerator extends TileEntityLuxPowered implements ISid
 
 	@Override
 	public String getInventoryName() {
-		return this.hasCustomInventoryName() ? this.generatorName : "Lux Generator";
+		return this.hasCustomInventoryName() ? this.tileName : "Lux Generator";
 	}
 
 	@Override
 	public boolean hasCustomInventoryName() {
-		return this.generatorName != null && this.generatorName.length() > 0;
+		return this.tileName != null && this.tileName.length() > 0;
 	}
 
 	@Override
@@ -121,8 +118,8 @@ public class TileEntityLuxGenerator extends TileEntityLuxPowered implements ISid
 		this.burnRate = tagCompound.getInteger("burnRate");
 
 
-		if (tagCompound.hasKey("generatorName", 8)) {
-			this.generatorName = tagCompound.getString("generatorName");
+		if (tagCompound.hasKey("tileName", 8)) {
+			this.tileName = tagCompound.getString("tileName");
 		}
 	}
 
@@ -147,7 +144,7 @@ public class TileEntityLuxGenerator extends TileEntityLuxPowered implements ISid
 		tagCompound.setTag("items", tagList);
 
 		if (this.hasCustomInventoryName()) {
-			tagCompound.setString("generatorName", this.generatorName);
+			tagCompound.setString("tileName", this.tileName);
 		}
 	}
 
@@ -156,13 +153,6 @@ public class TileEntityLuxGenerator extends TileEntityLuxPowered implements ISid
 			return 0;
 
 		return i * this.burnTime / this.maxBurnTime;
-	}
-
-	public int getScaledEnergy(int i) {
-		if (this.maxLux == 0)
-			return 0;
-
-		return i * this.storedLux / this.maxLux;
 	}
 
 	public boolean isBurning() {

@@ -1,7 +1,11 @@
 package com.cobbleopolis.luminousflux.handler;
 
+import com.cobbleopolis.luminousflux.gui.GuiLuxBattery;
 import com.cobbleopolis.luminousflux.gui.GuiLuxGenerator;
+import com.cobbleopolis.luminousflux.inventory.ContainerLuxBattery;
 import com.cobbleopolis.luminousflux.inventory.ContainerLuxGenerator;
+import com.cobbleopolis.luminousflux.reference.Gui;
+import com.cobbleopolis.luminousflux.tileentity.TileEntityLuxBattery;
 import com.cobbleopolis.luminousflux.tileentity.TileEntityLuxGenerator;
 import cpw.mods.fml.common.network.IGuiHandler;
 import net.minecraft.entity.player.EntityPlayer;
@@ -15,19 +19,26 @@ public class LFGuiHandler implements IGuiHandler {
 
 	@Override
 	public Object getServerGuiElement(int ID, EntityPlayer player, World world, int x, int y, int z) {
-		if(ID == 0){
-			TileEntityLuxGenerator tileEntityFurnace = (TileEntityLuxGenerator) world.getTileEntity(x, y, z);
-			return new ContainerLuxGenerator(player.inventory, tileEntityFurnace);
+		if(ID == Gui.LUX_GENERATOR){
+			TileEntityLuxGenerator tileEntity = (TileEntityLuxGenerator) world.getTileEntity(x, y, z);
+			return new ContainerLuxGenerator(player.inventory, tileEntity);
+		} else if(ID == Gui.LUX_BATTERY){
+			TileEntityLuxBattery tileEntityTestContainer = (TileEntityLuxBattery) world.getTileEntity(x, y, z);
+			return new ContainerLuxBattery(player.inventory, tileEntityTestContainer);
 		}
 		return null;
 	}
 
 	@Override
 	public Object getClientGuiElement(int ID, EntityPlayer player, World world, int x, int y, int z) {
-		if(ID == 0){
+		if(ID == Gui.LUX_GENERATOR){
 			TileEntityLuxGenerator tileEntityTestContainer = (TileEntityLuxGenerator) world.getTileEntity(x, y, z);
 			return new GuiLuxGenerator(player.inventory, tileEntityTestContainer);
+		} else if(ID == Gui.LUX_BATTERY) {
+			TileEntityLuxBattery tileEntityTestContainer = (TileEntityLuxBattery) world.getTileEntity(x, y, z);
+			return new GuiLuxBattery(player.inventory, tileEntityTestContainer);
 		}
+
 		return null;
 	}
 
