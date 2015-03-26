@@ -6,9 +6,14 @@ import java.util.HashMap;
 
 public class FuelHandlerLuxGenerator {
 
-	private static HashMap<String, Integer> fuelList = new HashMap<>();
+	private static HashMap<String, int[]> fuelList = new HashMap<>();
 
-	public static void registerFuel(Item item, int value){
+	/**
+	 * Registers a fuel with the Lux Generator fuel handler
+	 * @param item The item to register
+	 * @param value An array that contains the amount of lux generated per tick and for how many ticks (in that order)
+	 */
+	public static void registerFuel(Item item, int[] value){
 		fuelList.put(item.getUnlocalizedName(), value);
 	}
 
@@ -16,12 +21,12 @@ public class FuelHandlerLuxGenerator {
 		fuelList.remove(item.getUnlocalizedName());
 	}
 
-	public static int getItemFuelValue(Item item){
+	public static int[] getItemFuelValue(Item item){
 		if(fuelList.containsKey(item.getUnlocalizedName())) {
 //			((Item) Item.itemRegistry.getObject(item.getUnlocalizedName())).in
 			return fuelList.get(item.getUnlocalizedName());
 		} else {
-			return 0;
+			return new int[]{0, 0};
 		}
 	}
 }

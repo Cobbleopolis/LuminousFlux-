@@ -19,6 +19,7 @@ public class TileEntityLuxGenerator extends TileEntityLuxPowered implements ISid
 
 	public int burnTime;
 	public int maxBurnTime;
+	public int burnRate;
 
 
 	private String generatorName;
@@ -26,8 +27,8 @@ public class TileEntityLuxGenerator extends TileEntityLuxPowered implements ISid
 	public TileEntityLuxGenerator() {
 		super();
 		this.storedLux = 0;
-		this.maxLux = 512;
-		this.outputRate = 5;
+		this.maxLux = 1024;
+		this.outputRate = 4;
 	}
 
 	public void furnaceName(String string) {
@@ -54,7 +55,6 @@ public class TileEntityLuxGenerator extends TileEntityLuxPowered implements ISid
 				return itemstack;
 			} else {
 				itemstack = this.itemStacks[par1].splitStack(par2);
-
 				if (this.itemStacks[par1].stackSize == 0) {
 					this.itemStacks[par1] = null;
 				}
@@ -118,6 +118,7 @@ public class TileEntityLuxGenerator extends TileEntityLuxPowered implements ISid
 
 		this.burnTime = tagCompound.getInteger("burnTime");
 		this.maxBurnTime = tagCompound.getInteger("maxBurnTime");
+		this.burnRate = tagCompound.getInteger("burnRate");
 
 
 		if (tagCompound.hasKey("generatorName", 8)) {
@@ -130,6 +131,7 @@ public class TileEntityLuxGenerator extends TileEntityLuxPowered implements ISid
 		super.writeToNBT(tagCompound);
 		tagCompound.setInteger("burnTime", this.burnTime);
 		tagCompound.setInteger("maxBurnTime", this.maxBurnTime);
+		tagCompound.setInteger("burnRate", this.burnRate);
 
 		NBTTagList tagList = new NBTTagList();
 
@@ -177,12 +179,13 @@ public class TileEntityLuxGenerator extends TileEntityLuxPowered implements ISid
 				this.burnTime--;
 				makeDirty = true;
 				if (this.storedLux < this.maxLux)
-					this.storedLux++;
+					this.storedLux = Math.min(this.storedLux + this.burnRate, this.maxLux);
+
 			}
 
 			if (this.burnTime == 0 && this.canSmelt() && this.storedLux < this.maxLux) {
-				this.burnTime = this.maxBurnTime = getItemBurnTime(this.itemStacks[0]);
-				this.maxBurnTime = getItemBurnTime(this.itemStacks[0]);
+				this.burnTime = this.maxBurnTime = getItemBurnTime(this.itemStacks[0])[1];
+				this.burnRate = getItemBurnTime(this.itemStacks[0])[0];
 
 				if (this.burnTime > 0) {
 					if (this.itemStacks[0] != null) {
@@ -211,11 +214,7 @@ public class TileEntityLuxGenerator extends TileEntityLuxPowered implements ISid
 	}
 
 	private boolean canSmelt() {
-		if (this.itemStacks[0] == null) {
-			return false;
-		} else {
-			return getItemBurnTime(this.itemStacks[0]) > 0;
-		}
+		return this.itemStacks[0] != null && getItemBurnTime(this.itemStacks[0])[1] > 0;
 	}
 
 //	public void smeltItem() {
@@ -236,9 +235,9 @@ public class TileEntityLuxGenerator extends TileEntityLuxPowered implements ISid
 //		}
 //	}
 
-	public static int getItemBurnTime(ItemStack itemstack) {
+	public static int[] getItemBurnTime(ItemStack itemstack) {
 		if (itemstack == null) {
-			return 0;
+			return new int[]{0, 0};
 		} else {
 			Item item = itemstack.getItem();
 
@@ -259,12 +258,12 @@ public class TileEntityLuxGenerator extends TileEntityLuxPowered implements ISid
 	}
 
 	public static boolean isItemFuel(ItemStack itemstack) {
-		return getItemBurnTime(itemstack) > 0;
+		return getItemBurnTime(itemstack)[1] > 0;
 	}
 
 	@Override
 	public boolean isUseableByPlayer(EntityPlayer player) {
-		return this.worldObj.getTileEntity(this.xCoord, this.yCoord, this.zCoord) != this ? false : player.getDistanceSq((double) this.xCoord + 0.5D, (double) this.yCoord + 0.5D, (double) this.zCoord + 0.5D) <= 64.0D;
+		return this.worldObj.getTileEntity(this.xCoord, this.yCoord, this.zCoord) == this && player.getDistanceSq((double) this.xCoord + 0.5D, (double) this.yCoord + 0.5D, (double) this.zCoord + 0.5D) <= 64.0D;
 	}
 
 	@Override
@@ -279,7 +278,7 @@ public class TileEntityLuxGenerator extends TileEntityLuxPowered implements ISid
 
 	@Override
 	public boolean isItemValidForSlot(int par1, ItemStack itemstack) {
-		return par1 == 2 ? false : (par1 == 1 ? isItemFuel(itemstack) : true);
+		return par1 != 2 && (par1 != 1 || isItemFuel(itemstack));
 	}
 
 	@Override

@@ -4,6 +4,7 @@ import com.cobbleopolis.luminousflux.LuminousFlux;
 import com.cobbleopolis.luminousflux.init.LFItems;
 import com.cobbleopolis.luminousflux.reference.Names;
 import com.cobbleopolis.luminousflux.tileentity.TileEntityLuxGenerator;
+import com.cobbleopolis.luminousflux.tileentity.TileEntityLuxPowered;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
@@ -30,7 +31,7 @@ public class BlockLuxGenerator extends LFBlock {
 	public BlockLuxGenerator() {
 		super(Material.rock);
 		setBlockName(Names.Blocks.LUX_GENERATOR);
-		setStepSound(this.soundTypeStone);
+		setStepSound(soundTypeStone);
 		setHardness(3.5F);
 	}
 
@@ -50,12 +51,16 @@ public class BlockLuxGenerator extends LFBlock {
 
 	@Override
 	public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int par6, float par7, float par8, float par9) {
-		if(!player.getHeldItem().getItem().equals(LFItems.itemWiringTool)) {
-			player.openGui(LuminousFlux.instance, 0, world, x, y, z);
-			return true;
-		} else {
-			return false;
-		}
+		if (player.getHeldItem() != null) {
+			if (player.getHeldItem().getItem().equals(LFItems.itemWiringTool)) {
+				return false;
+			}
+		} else if (player.isSneaking())
+			for(int[] i : ((TileEntityLuxPowered) world.getTileEntity(x, y, z)).blocksToPower)
+				System.out.println(i[0] + " " + i[1] + " " + i[2]);
+
+		player.openGui(LuminousFlux.instance, 0, world, x, y, z);
+		return true;
 	}
 
 	/**
@@ -63,7 +68,6 @@ public class BlockLuxGenerator extends LFBlock {
 	 */
 	@Override
 	public TileEntity createNewTileEntity(World world, int par2) {
-//		return new TileEntityLuxGenerator(0, 512, false, true);
 		return new TileEntityLuxGenerator();
 	}
 

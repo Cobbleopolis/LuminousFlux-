@@ -2,7 +2,6 @@ package com.cobbleopolis.luminousflux.item;
 
 import com.cobbleopolis.luminousflux.reference.Names;
 import com.cobbleopolis.luminousflux.tileentity.TileEntityLuxPowered;
-import net.minecraft.block.Block;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
@@ -23,7 +22,7 @@ public class ItemWiringTool extends LFItem {
                              // where on the target block was clicked (0.0-1.0)
                              int side, float blockx, float blocky, float blockz) {
         TileEntityLuxPowered te = (TileEntityLuxPowered) world.getTileEntity(x, y, z);
-        if (!world.isRemote && te instanceof TileEntityLuxPowered) {
+        if (!world.isRemote && te != null) {
             if(player.isSneaking()){
                 NBTTagCompound nbt = new NBTTagCompound();
                 nbt.setInteger("xFrom", x);
@@ -32,10 +31,23 @@ public class ItemWiringTool extends LFItem {
                 itemStack.setTagCompound(nbt);
             } else {
                 NBTTagCompound nbt = itemStack.getTagCompound();
-                TileEntityLuxPowered teSender = (TileEntityLuxPowered) world.getTileEntity(nbt.getInteger("xFrom"), nbt.getInteger("xFrom"), nbt.getInteger("xFrom"));
-                int[] block = {x, y, z};
-                teSender.blocksToPower.add(block);
-                itemStack.setTagCompound(null);
+                if(nbt != null) {
+                    TileEntityLuxPowered teSender = (TileEntityLuxPowered) world.getTileEntity(nbt.getInteger("xFrom"), nbt.getInteger("yFrom"), nbt.getInteger("zFrom"));
+                    if(teSender != null) {
+//                        System.out.println(te.xCoord + " " + teSender.xCoord);
+//                        System.out.println(te.yCoord + " " + teSender.yCoord);
+//                        System.out.println(te.zCoord + " " + teSender.zCoord);
+                        if(te.xCoord != teSender.xCoord || te.yCoord != teSender.yCoord || te.zCoord != teSender.zCoord) {
+                            int[] block = {x, y, z};
+                            teSender.blocksToPower.add(block);
+                            itemStack.setTagCompound(null);
+                        }
+                    } else {
+                        System.out.println("Whoops.. " + nbt.getInteger("xFrom") + " " + nbt.getInteger("yFrom") + " " + nbt.getInteger("zFrom"));
+                    }
+                } else {
+                    System.out.println("Whoops.");
+                }
             }
         }
         return true;

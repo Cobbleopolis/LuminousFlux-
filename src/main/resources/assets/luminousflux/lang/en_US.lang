@@ -1,8 +1,7 @@
 glowingGlass.name=Glowing Glass
 luminousLamp.name=Luminous Lamp
 lightFixture.name=Light Fixture
-tile.luxGenerator.name=Lux Generator
-tile.luxGeneratorActive.name=Lux Generator
+luxGenerator.name=Lux Generator
 
 item.bulb.name=Light Bulb
 item.wiringTool.name=Wiring Tool
