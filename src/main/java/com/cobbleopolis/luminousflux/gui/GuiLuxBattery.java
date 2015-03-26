@@ -15,8 +15,7 @@ import java.util.List;
 public class GuiLuxBattery extends GuiContainer {
     private static final ResourceLocation luxBatteryGuiTexture = new ResourceLocation(Textures.RESOURCE_PREFIX + Textures.GUI_SHEET_LOCATION + "luxBattery.png");
     private TileEntityLuxBattery te;
-    private List tooltip = new ArrayList();
-    private int mouseX, mouseY;
+    private List<String> tooltip = new ArrayList<>();
 
     public GuiLuxBattery(InventoryPlayer invPlayer, TileEntityLuxBattery tile) {
         super(new ContainerLuxBattery(invPlayer, tile));
@@ -24,9 +23,9 @@ public class GuiLuxBattery extends GuiContainer {
     }
 
     protected void drawGuiContainerForegroundLayer(int par1, int par2) {
-        String string = this.te.hasCustomInventoryName() ? this.te.getInventoryName() : I18n.format(this.te.getInventoryName(), new Object[0]);
+        String string = this.te.hasCustomInventoryName() ? this.te.getInventoryName() : I18n.format(this.te.getInventoryName());
         this.fontRendererObj.drawString(string, 8, 6, 4210752);
-        this.fontRendererObj.drawString(I18n.format("container.inventory", new Object[0]), 8, this.ySize - 94, 4210752);
+        this.fontRendererObj.drawString(I18n.format("container.inventory"), 8, this.ySize - 94, 4210752);
     }
 
     @Override
@@ -44,8 +43,8 @@ public class GuiLuxBattery extends GuiContainer {
     @Override
     public void drawScreen(int par1, int par2, float par3) {
         super.drawScreen(par1, par2, par3);
-        this.mouseX = par1 - guiLeft;
-        this.mouseY = par2 - guiTop;
+        int mouseX = par1 - guiLeft;
+        int mouseY = par2 - guiTop;
         if(mouseX >= 80 && mouseX <= 95 && mouseY >= 12 && mouseY <= 70) {
             tooltip.add("Lux");
             tooltip.add(te.storedLux + " lx/" + te.maxLux + " lx");
