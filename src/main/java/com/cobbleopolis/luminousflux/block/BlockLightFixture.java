@@ -19,7 +19,7 @@ public class BlockLightFixture extends LFBlock {
 
 	public BlockLightFixture() {
 		super(Material.iron);
-		setStepSound(this.soundTypeStone);
+		setStepSound(soundTypeStone);
 		setBlockName(Names.Blocks.LIGHT);
 	}
 
