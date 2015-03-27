@@ -25,6 +25,8 @@ public class BlockLuxGenerator extends LFBlock {
 
 	@SideOnly(Side.CLIENT)
 	private IIcon top;
+	@SideOnly(Side.CLIENT)
+	private IIcon bottom;
 
 	private final Random random = new Random();
 
@@ -39,11 +41,15 @@ public class BlockLuxGenerator extends LFBlock {
 	public void registerBlockIcons(IIconRegister iconRegister) {
 		this.blockIcon = iconRegister.registerIcon(LuminousFlux.MODID + ":luxGeneratorSide");
 		this.top = iconRegister.registerIcon(LuminousFlux.MODID + ":luxGeneratorTop");
+		this.bottom = iconRegister.registerIcon(LuminousFlux.MODID + ":luxGeneratorBottom");
+
 	}
 
 	@SideOnly(Side.CLIENT)
 	public IIcon getIcon(int side, int meta) {
-		if (side == 0 || side == 1)
+		if (side == 0)
+			return bottom;
+		else if(side == 1)
 			return top;
 		else
 			return blockIcon;
