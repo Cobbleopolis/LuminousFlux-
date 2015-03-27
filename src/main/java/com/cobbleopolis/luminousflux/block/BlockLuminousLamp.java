@@ -3,6 +3,7 @@ package com.cobbleopolis.luminousflux.block;
 import com.cobbleopolis.luminousflux.reference.Names;
 import com.cobbleopolis.luminousflux.tileentity.TileEntityLuminousLamp;
 import net.minecraft.block.material.Material;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
 
@@ -22,13 +23,12 @@ public class BlockLuminousLamp extends LFBlock {
         return -1;
 	}
 
-	//It's not an opaque cube, so you need this.
 	@Override
 	public boolean isOpaqueCube() {
 		return false;
 	}
 
-	//It's not a normal block, so you need this too.
+	@Override
 	public boolean renderAsNormalBlock() {
         return false;
 	}
@@ -36,5 +36,14 @@ public class BlockLuminousLamp extends LFBlock {
 	@Override
 	public TileEntity createNewTileEntity(World world, int metadata) {
 		return new TileEntityLuminousLamp();
+	}
+
+	@Override
+	public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int par6, float par7, float par8, float par9) {
+		if(player.isSneaking())
+			world.getBlock(x, y, z).setLightLevel(1F);
+		else
+			world.getBlock(x, y, z).setLightLevel(0F);
+		return false;
 	}
 }

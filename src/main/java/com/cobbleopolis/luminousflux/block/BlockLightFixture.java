@@ -4,6 +4,7 @@ import com.cobbleopolis.luminousflux.init.LFItems;
 import com.cobbleopolis.luminousflux.item.ItemBulb;
 import com.cobbleopolis.luminousflux.reference.Names;
 import com.cobbleopolis.luminousflux.tileentity.TileEntityLight;
+import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
@@ -147,5 +148,18 @@ public class BlockLightFixture extends LFBlock {
 					this.setBlockBounds(.375f, .9375f, .375f, .625f, 1f, .625f);
 				break;
 		}
+	}
+
+	@Override
+	public void onNeighborBlockChange(World world, int x, int y, int z, Block block) {
+		world.markBlockForUpdate(x, y, z);
+	}
+
+	@Override
+	public int getLightValue(IBlockAccess world, int x, int y, int z) {
+		TileEntityLight te = (TileEntityLight) world.getTileEntity(x, y, z);
+		if(te.getWorldObj().isBlockIndirectlyGettingPowered(x, y, z))
+			return 15;
+		return 0;
 	}
 }

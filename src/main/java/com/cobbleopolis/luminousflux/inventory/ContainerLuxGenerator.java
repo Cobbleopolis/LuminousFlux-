@@ -1,4 +1,4 @@
-package com.cobbleopolis.luminousflux.inventory; //ContainerLuxGenerator
+package com.cobbleopolis.luminousflux.inventory;
 
 import com.cobbleopolis.luminousflux.tileentity.TileEntityLuxGenerator;
 import cpw.mods.fml.relauncher.Side;

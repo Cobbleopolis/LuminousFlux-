@@ -48,20 +48,20 @@ public class LFCrafting {
 	}
 
 	public static void loadLuxGeneratorFuels() {
-		FuelHandlerLuxGenerator.registerFuel(Item.getItemFromBlock(Blocks.beacon),           new int[]{Crafting.LuxGeneratorFuelLevels.LEVEL_THREE, 5});
-		FuelHandlerLuxGenerator.registerFuel(Item.getItemFromBlock(Blocks.glowstone),        new int[]{Crafting.LuxGeneratorFuelLevels.LEVEL_THREE, 5});
-		FuelHandlerLuxGenerator.registerFuel(Item.getItemFromBlock(Blocks.lit_pumpkin),      new int[]{Crafting.LuxGeneratorFuelLevels.LEVEL_THREE, 5});
-		FuelHandlerLuxGenerator.registerFuel(Item.getItemFromBlock(Blocks.redstone_lamp),    new int[]{Crafting.LuxGeneratorFuelLevels.LEVEL_THREE, 5});
-		FuelHandlerLuxGenerator.registerFuel(Item.getItemFromBlock(Blocks.torch),            new int[]{Crafting.LuxGeneratorFuelLevels.LEVEL_THREE, 5});
-		FuelHandlerLuxGenerator.registerFuel(Item.getItemFromBlock(Blocks.furnace),          new int[]{Crafting.LuxGeneratorFuelLevels.LEVEL_THREE, 5});
+		FuelHandlerLuxGenerator.registerFuel(Item.getItemFromBlock(Blocks.beacon),           new int[]{Crafting.LuxGeneratorFuelLevels.LEVEL_THREE, 4});
+		FuelHandlerLuxGenerator.registerFuel(Item.getItemFromBlock(Blocks.glowstone),        new int[]{Crafting.LuxGeneratorFuelLevels.LEVEL_THREE, 4});
+		FuelHandlerLuxGenerator.registerFuel(Item.getItemFromBlock(Blocks.lit_pumpkin),      new int[]{Crafting.LuxGeneratorFuelLevels.LEVEL_THREE, 4});
+		FuelHandlerLuxGenerator.registerFuel(Item.getItemFromBlock(Blocks.redstone_lamp),    new int[]{Crafting.LuxGeneratorFuelLevels.LEVEL_THREE, 4});
+		FuelHandlerLuxGenerator.registerFuel(Item.getItemFromBlock(Blocks.torch),            new int[]{Crafting.LuxGeneratorFuelLevels.LEVEL_THREE, 4});
+		FuelHandlerLuxGenerator.registerFuel(Item.getItemFromBlock(Blocks.furnace),          new int[]{Crafting.LuxGeneratorFuelLevels.LEVEL_THREE, 4});
 
-		FuelHandlerLuxGenerator.registerFuel(Item.getItemFromBlock(Blocks.redstone_ore),     new int[]{Crafting.LuxGeneratorFuelLevels.LEVEL_TWO,   5});
-		FuelHandlerLuxGenerator.registerFuel(Item.getItemFromBlock(Blocks.ender_chest),      new int[]{Crafting.LuxGeneratorFuelLevels.LEVEL_TWO,   5});
-		FuelHandlerLuxGenerator.registerFuel(Item.getItemFromBlock(Blocks.redstone_torch),   new int[]{Crafting.LuxGeneratorFuelLevels.LEVEL_TWO,   5});
+		FuelHandlerLuxGenerator.registerFuel(Item.getItemFromBlock(Blocks.redstone_ore),     new int[]{Crafting.LuxGeneratorFuelLevels.LEVEL_TWO,   4});
+		FuelHandlerLuxGenerator.registerFuel(Item.getItemFromBlock(Blocks.ender_chest),      new int[]{Crafting.LuxGeneratorFuelLevels.LEVEL_TWO,   4});
+		FuelHandlerLuxGenerator.registerFuel(Item.getItemFromBlock(Blocks.redstone_torch),   new int[]{Crafting.LuxGeneratorFuelLevels.LEVEL_TWO,   4});
 
-		FuelHandlerLuxGenerator.registerFuel(Item.getItemFromBlock(Blocks.brown_mushroom),   new int[]{Crafting.LuxGeneratorFuelLevels.LEVEL_ONE,   5});
-		FuelHandlerLuxGenerator.registerFuel(Item.getItemFromBlock(Blocks.dragon_egg),       new int[]{Crafting.LuxGeneratorFuelLevels.LEVEL_ONE,   5});
-		FuelHandlerLuxGenerator.registerFuel(Item.getItemFromBlock(Blocks.end_portal_frame), new int[]{Crafting.LuxGeneratorFuelLevels.LEVEL_ONE,   5});
+		FuelHandlerLuxGenerator.registerFuel(Item.getItemFromBlock(Blocks.brown_mushroom),   new int[]{Crafting.LuxGeneratorFuelLevels.LEVEL_ONE,   4});
+		FuelHandlerLuxGenerator.registerFuel(Item.getItemFromBlock(Blocks.dragon_egg),       new int[]{Crafting.LuxGeneratorFuelLevels.LEVEL_ONE,   4});
+		FuelHandlerLuxGenerator.registerFuel(Item.getItemFromBlock(Blocks.end_portal_frame), new int[]{Crafting.LuxGeneratorFuelLevels.LEVEL_ONE,   4});
 
 
 		FuelHandlerLuxGenerator.registerFuel(Item.getItemFromBlock(LFBlocks.glowingGlass),   new int[]{5, 25});

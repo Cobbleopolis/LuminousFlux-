@@ -23,7 +23,6 @@ public class FuelHandlerLuxGenerator {
 
 	public static int[] getItemFuelValue(Item item){
 		if(fuelList.containsKey(item.getUnlocalizedName())) {
-//			((Item) Item.itemRegistry.getObject(item.getUnlocalizedName())).in
 			return fuelList.get(item.getUnlocalizedName());
 		} else {
 			return new int[]{0, 0};

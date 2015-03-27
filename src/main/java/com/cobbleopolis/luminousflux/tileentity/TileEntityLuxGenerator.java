@@ -172,10 +172,10 @@ public class TileEntityLuxGenerator extends TileEntityLuxPowered implements ISid
 					this.storedLux = Math.min(this.storedLux + this.burnRate, this.maxLux);
 
 			}
-
+			int[] burnInfo = getItemBurnTime(this.itemStacks[0]);
 			if (this.burnTime == 0 && this.canSmelt() && this.storedLux < this.maxLux) {
-				this.burnTime = this.maxBurnTime = getItemBurnTime(this.itemStacks[0])[1];
-				this.burnRate = getItemBurnTime(this.itemStacks[0])[0];
+				this.burnTime = this.maxBurnTime = burnInfo[1];
+				this.burnRate = burnInfo[0];
 
 				if (this.burnTime > 0) {
 					if (this.itemStacks[0] != null) {
