@@ -63,7 +63,9 @@ public class BlockLightFixture extends LFBlock {
 			} else {
 				if (!te.bulbItem.equalsIgnoreCase("none")) {
 					if (!world.isRemote) {
-						world.spawnEntityInWorld(new EntityItem(world, x, y, z, new ItemStack(LFItems.itemBulb)));
+//						if(player.getHeldItem() != null)
+							if(player.getHeldItem().getItem() != LFItems.itemWiringTool)
+								world.spawnEntityInWorld(new EntityItem(world, x, y, z, new ItemStack(LFItems.itemBulb)));
 					}
 					te.bulbItem = "none";
 					te.markDirty();

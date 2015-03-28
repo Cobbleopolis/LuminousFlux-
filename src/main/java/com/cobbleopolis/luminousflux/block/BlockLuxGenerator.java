@@ -84,7 +84,6 @@ public class BlockLuxGenerator extends LFBlock {
 
 	@Override
 	public void breakBlock(World world, int x, int y, int z, Block block, int meta) {
-//		System.out.println(x + " " + y + " " + z);
 		if (world.getTileEntity(x, y, z) != null) {
 			if (world.getTileEntity(x, y, z) instanceof TileEntityLuxGenerator) {
 

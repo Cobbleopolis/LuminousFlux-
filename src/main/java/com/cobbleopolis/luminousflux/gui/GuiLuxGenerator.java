@@ -49,8 +49,6 @@ public class GuiLuxGenerator extends GuiContainer {
 		}
 	}
 
-	// 286 302
-	// 61 123
 	@Override
 	public void drawScreen(int par1, int par2, float par3) {
 		super.drawScreen(par1, par2, par3);

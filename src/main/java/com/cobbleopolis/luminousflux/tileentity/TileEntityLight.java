@@ -6,7 +6,7 @@ import net.minecraft.network.Packet;
 import net.minecraft.network.play.server.S35PacketUpdateTileEntity;
 import net.minecraft.tileentity.TileEntity;
 
-public class TileEntityLight extends TileEntity {
+public class TileEntityLight extends TileEntityLuxPowered {
 
 	public String bulbItem = "none";
 	public int direction = 0;

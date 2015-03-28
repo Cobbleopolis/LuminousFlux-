@@ -47,7 +47,7 @@ public class GuiLuxBattery extends GuiContainer {
         int mouseY = par2 - guiTop;
         if(mouseX >= 80 && mouseX <= 95 && mouseY >= 12 && mouseY <= 70) {
             tooltip.add("Lux");
-            tooltip.add(te.storedLux + " lx/" + te.maxLux + " lx");
+            tooltip.add(te.storedLux + " lx / " + te.maxLux + " lx");
             this.func_146283_a(tooltip, mouseX + guiLeft, mouseY + guiTop);
             tooltip.clear();
         }
