@@ -34,9 +34,6 @@ public class ItemWiringTool extends LFItem {
                 if(nbt != null) {
                     TileEntityLuxPowered teSender = (TileEntityLuxPowered) world.getTileEntity(nbt.getInteger("xFrom"), nbt.getInteger("yFrom"), nbt.getInteger("zFrom"));
                     if(teSender != null) {
-//                        System.out.println(te.xCoord + " " + teSender.xCoord);
-//                        System.out.println(te.yCoord + " " + teSender.yCoord);
-//                        System.out.println(te.zCoord + " " + teSender.zCoord);
                         if(te.xCoord != teSender.xCoord || te.yCoord != teSender.yCoord || te.zCoord != teSender.zCoord) {
                             int[] block = {x, y, z};
                             teSender.blocksToPower.add(block);

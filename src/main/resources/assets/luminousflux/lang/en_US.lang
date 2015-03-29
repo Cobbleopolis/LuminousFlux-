@@ -4,7 +4,8 @@ lightFixture.name=Light Fixture
 luxGenerator.name=Lux Generator
 luxBattery.name=Lux Battery
 
-item.bulb.name=Light Bulb
+item.lightBulb.name=Light Bulb
 item.wiringTool.name=Wiring Tool
+item.luxMeter.name=Lux Meter
 
 itemGroup.lf=Luminous Flux

@@ -21,8 +21,19 @@ public class TileEntityLuxPowered extends TileEntity {
 
 	public ArrayList<int[]> blocksToPower = new ArrayList<>();
 
+	public TileEntityLuxPowered() {
+		super();
+		storedLux = 0;
+		maxLux = 100;
+		outputRate = 10;
+	}
+
 	public boolean isEnergyBufferFull() {
 		return storedLux >= maxLux;
+	}
+
+	public boolean hasPower() {
+		return storedLux > 0;
 	}
 
 	public void sendLuxPacket(TileEntityLuxPowered te, int packetSize) {
@@ -55,13 +66,13 @@ public class TileEntityLuxPowered extends TileEntity {
 	@Override
 	public void updateEntity() {
 		ArrayList<int[]> remove = new ArrayList<>();
-		if (blocksToPower.size() > 0 && this.storedLux >= this.outputRate * this.blocksToPower.size())
+		if (blocksToPower.size() > 0 && this.storedLux >= this.outputRate)
 			for (int[] i : blocksToPower) {
 				if (worldObj.getTileEntity(i[0], i[1], i[2]) instanceof TileEntityLuxPowered) {
 					TileEntityLuxPowered te = (TileEntityLuxPowered) worldObj.getTileEntity(i[0], i[1], i[2]);
 					if (te != null) {
-						if (te.canReceiveEnergyPacket(outputRate) && this.storedLux >= outputRate) {
-							int send = Math.min(this.storedLux, outputRate);
+						int send = Math.min(this.storedLux, outputRate);
+						if (te.canReceiveEnergyPacket(send)) {
 							this.sendLuxPacket(te, send);
 							worldObj.markBlockForUpdate(i[0], i[1], i[2]);
 							te.markDirty();
@@ -70,12 +81,11 @@ public class TileEntityLuxPowered extends TileEntity {
 						}
 					}
 				} else {
-//					System.out.println(this.blocksToPower.indexOf(i));
 					remove.add(i);
 				}
 
 			}
-		for(int[] i : remove)
+		for (int[] i : remove)
 			this.blocksToPower.remove(i);
 		remove.clear();
 	}

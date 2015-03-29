@@ -3,6 +3,7 @@ package com.cobbleopolis.luminousflux.gui;
 import com.cobbleopolis.luminousflux.inventory.ContainerLuxBattery;
 import com.cobbleopolis.luminousflux.reference.Textures;
 import com.cobbleopolis.luminousflux.tileentity.TileEntityLuxBattery;
+import com.cobbleopolis.luminousflux.util.UtilString;
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.entity.player.InventoryPlayer;
@@ -47,7 +48,7 @@ public class GuiLuxBattery extends GuiContainer {
         int mouseY = par2 - guiTop;
         if(mouseX >= 80 && mouseX <= 95 && mouseY >= 12 && mouseY <= 70) {
             tooltip.add("Lux");
-            tooltip.add(te.storedLux + " lx / " + te.maxLux + " lx");
+            tooltip.add(UtilString.formatIntWithCommas(te.storedLux) + " lx / " + UtilString.formatIntWithCommas(te.maxLux) + " lx");
             this.func_146283_a(tooltip, mouseX + guiLeft, mouseY + guiTop);
             tooltip.clear();
         }

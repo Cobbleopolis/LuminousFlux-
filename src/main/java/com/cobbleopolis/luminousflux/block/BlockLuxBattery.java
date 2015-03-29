@@ -20,7 +20,7 @@ public class BlockLuxBattery extends LFBlock {
     @Override
     public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int par6, float par7, float par8, float par9) {
         if (player.getHeldItem() != null) {
-            if (player.getHeldItem().getItem().equals(LFItems.itemWiringTool)) {
+            if (player.getHeldItem().getItem() == LFItems.itemWiringTool || player.getHeldItem().getItem() == LFItems.itemLuxMeter) {
                 return false;
             }
         }

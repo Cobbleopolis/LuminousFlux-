@@ -3,6 +3,7 @@ package com.cobbleopolis.luminousflux.gui;
 import com.cobbleopolis.luminousflux.inventory.ContainerLuxGenerator;
 import com.cobbleopolis.luminousflux.reference.Textures;
 import com.cobbleopolis.luminousflux.tileentity.TileEntityLuxGenerator;
+import com.cobbleopolis.luminousflux.util.UtilString;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.client.gui.inventory.GuiContainer;
@@ -57,7 +58,7 @@ public class GuiLuxGenerator extends GuiContainer {
 //		System.out.println("(" + par1 + " , " + par2 + ") | (" + guiLeft + " , " + guiTop + ")");
 		if(mouseX >= 134 && mouseX <= 151 && mouseY >= 12 && mouseY <= 70) {
 			tooltip.add("Lux");
-			tooltip.add(te.storedLux + " lx/" + te.maxLux + " lx");
+			tooltip.add(UtilString.formatIntWithCommas(te.storedLux) + " lx / " + UtilString.formatIntWithCommas(te.maxLux) + " lx");
 			this.func_146283_a(tooltip, mouseX + guiLeft, mouseY + guiTop);
 			tooltip.clear();
 		}

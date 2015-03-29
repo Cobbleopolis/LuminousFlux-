@@ -9,8 +9,8 @@ public class TileEntityLuxBattery extends TileEntityLuxPowered implements ISided
     public TileEntityLuxBattery() {
         super();
         this.storedLux = 0;
-        this.maxLux = 1024;
-        this.outputRate = 4;
+        this.maxLux = 5000;
+        this.outputRate = 10;
     }
 
     @Override

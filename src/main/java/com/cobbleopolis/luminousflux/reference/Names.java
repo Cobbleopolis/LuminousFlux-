@@ -11,7 +11,8 @@ public class Names {
 	}
 
 	public static class Items {
-		public static final String BULB = "bulb";
+		public static final String LIGHT_BULB = "lightBulb";
 		public static final String WIRING_TOOL = "wiringTool";
+		public static final String LUX_METER = "luxMeter";
 	}
 }
