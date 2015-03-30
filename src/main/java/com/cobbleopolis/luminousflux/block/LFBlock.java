@@ -14,7 +14,7 @@ import net.minecraft.world.World;
 
 public class LFBlock extends BlockContainer {
 
-	protected LFBlock(Material material) {
+	public LFBlock(Material material) {
 		super(material);
 		setCreativeTab(LuminousFlux.tabLF);
 		setBlockTextureName(LuminousFlux.MODID + ":" + getUnlocalizedName());

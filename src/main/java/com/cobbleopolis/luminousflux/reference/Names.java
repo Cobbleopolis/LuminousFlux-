@@ -7,6 +7,7 @@ public class Names {
 		public static final String GLOWING_GLASS = "glowingGlass";
 		public static final String LIGHT = "lightFixture";
 		public static final String LUX_GENERATOR = "luxGenerator";
+		public static final String LUX_SOLAR_GENERATOR = "luxSolarGenerator";
 		public static final String LUX_BATTERY = "luxBattery";
 	}
 
