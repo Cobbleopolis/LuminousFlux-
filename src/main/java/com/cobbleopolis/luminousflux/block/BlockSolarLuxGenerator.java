@@ -32,9 +32,9 @@ public class BlockSolarLuxGenerator extends LFBlock {
 
     @SideOnly(Side.CLIENT)
     public void registerBlockIcons(IIconRegister iconRegister) {
-        this.blockIcon = iconRegister.registerIcon(LuminousFlux.MODID + ":luxGeneratorSide");
-        this.top = iconRegister.registerIcon(LuminousFlux.MODID + ":luxGeneratorTop");
-        this.bottom = iconRegister.registerIcon(LuminousFlux.MODID + ":luxGeneratorBottom");
+        this.blockIcon = iconRegister.registerIcon(LuminousFlux.MODID + ":luxSolarGeneratorSide");
+        this.top = iconRegister.registerIcon(LuminousFlux.MODID + ":luxSolarGeneratorTop");
+        this.bottom = iconRegister.registerIcon(LuminousFlux.MODID + ":luxSolarGeneratorBottom");
 
     }
 
