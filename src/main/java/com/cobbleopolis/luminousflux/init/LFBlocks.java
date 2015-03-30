@@ -2,10 +2,7 @@ package com.cobbleopolis.luminousflux.init;
 
 
 import com.cobbleopolis.luminousflux.block.*;
-import com.cobbleopolis.luminousflux.tileentity.TileEntityLight;
-import com.cobbleopolis.luminousflux.tileentity.TileEntityLuminousLamp;
-import com.cobbleopolis.luminousflux.tileentity.TileEntityLuxBattery;
-import com.cobbleopolis.luminousflux.tileentity.TileEntityLuxGenerator;
+import com.cobbleopolis.luminousflux.tileentity.*;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
 
@@ -14,6 +11,7 @@ public class LFBlocks {
 	public static Block glowingGlass = new BlockGlowingGlass();
 	public static Block lightFixture = new BlockLightFixture();
 	public static Block luxGenerator = new BlockLuxGenerator();
+	public static Block luxSolarGenerator = new BlockSolarLuxGenerator();
 	public static Block luxBattery = new BlockLuxBattery();
 
 	public static void registerBlocks(){
@@ -27,6 +25,8 @@ public class LFBlocks {
 				luxGenerator.getUnlocalizedName());
 		GameRegistry.registerBlock(luxBattery,
 				luxBattery.getUnlocalizedName());
+		GameRegistry.registerBlock(luxSolarGenerator,
+				luxSolarGenerator.getUnlocalizedName());
 	}
 
 	public static void registerTileEntity() {
@@ -34,5 +34,6 @@ public class LFBlocks {
 		GameRegistry.registerTileEntity(TileEntityLight.class, "tileentity." + lightFixture.getUnlocalizedName());
 		GameRegistry.registerTileEntity(TileEntityLuxGenerator.class, "tileentity." + luxGenerator.getUnlocalizedName());
 		GameRegistry.registerTileEntity(TileEntityLuxBattery.class, "tileentity." + luxBattery.getUnlocalizedName());
+		GameRegistry.registerTileEntity(TileEntitySolarLuxGenerator.class, "tileentity." + luxSolarGenerator.getUnlocalizedName());
 	}
 }
