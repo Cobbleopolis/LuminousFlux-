@@ -2,11 +2,14 @@ package com.cobbleopolis.luminousflux.handler;
 
 import com.cobbleopolis.luminousflux.gui.GuiLuxBattery;
 import com.cobbleopolis.luminousflux.gui.GuiLuxGenerator;
+import com.cobbleopolis.luminousflux.gui.GuiSolarLuxGenerator;
 import com.cobbleopolis.luminousflux.inventory.ContainerLuxBattery;
 import com.cobbleopolis.luminousflux.inventory.ContainerLuxGenerator;
+import com.cobbleopolis.luminousflux.inventory.ContainerSolarLuxGenerator;
 import com.cobbleopolis.luminousflux.reference.Gui;
 import com.cobbleopolis.luminousflux.tileentity.TileEntityLuxBattery;
 import com.cobbleopolis.luminousflux.tileentity.TileEntityLuxGenerator;
+import com.cobbleopolis.luminousflux.tileentity.TileEntitySolarLuxGenerator;
 import cpw.mods.fml.common.network.IGuiHandler;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.world.World;
@@ -25,6 +28,9 @@ public class LFGuiHandler implements IGuiHandler {
 		} else if(ID == Gui.LUX_BATTERY){
 			TileEntityLuxBattery tileEntity = (TileEntityLuxBattery) world.getTileEntity(x, y, z);
 			return new ContainerLuxBattery(player.inventory, tileEntity);
+		} else if(ID == Gui.LUX_SOLAR_GENERATOR) {
+			TileEntitySolarLuxGenerator tileEntity = (TileEntitySolarLuxGenerator) world.getTileEntity(x, y, z);
+			return new ContainerSolarLuxGenerator(player.inventory, tileEntity);
 		}
 		return null;
 	}
@@ -37,6 +43,9 @@ public class LFGuiHandler implements IGuiHandler {
 		} else if(ID == Gui.LUX_BATTERY) {
 			TileEntityLuxBattery tileEntity = (TileEntityLuxBattery) world.getTileEntity(x, y, z);
 			return new GuiLuxBattery(player.inventory, tileEntity);
+		} else if(ID == Gui.LUX_SOLAR_GENERATOR){
+			TileEntitySolarLuxGenerator tileEntity = (TileEntitySolarLuxGenerator) world.getTileEntity(x, y, z);
+			return new GuiSolarLuxGenerator(player.inventory, tileEntity);
 		}
 
 		return null;

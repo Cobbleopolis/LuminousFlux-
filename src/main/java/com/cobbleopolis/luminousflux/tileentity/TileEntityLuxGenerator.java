@@ -25,7 +25,7 @@ public class TileEntityLuxGenerator extends TileEntityLuxPowered implements ISid
 		super();
 		this.storedLux = 0;
 		this.maxLux = 1000;
-		this.outputRate = 25;
+		this.outputRate = 1;
 	}
 
 	public void furnaceName(String string) {
