@@ -1,7 +1,11 @@
 glowingGlass.name=Verre rougeoyant
 luminousLamp.name=Lampe lumineuse
-light.name=Installation de lumière
+lightFixture.name=Luminaire
+luxGenerator.name=Générateur de Lux
+luxBattery.name=Batterie de Lux
 
 item.bulb.name=Bulbe d'ampoule
+item.wiringTool.name=Outils de cablage
+item.luxMeter.name=Lux Mètre
 
 itemGroup.lf=Luminous Flux
